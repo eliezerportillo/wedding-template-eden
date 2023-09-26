@@ -1,30 +1,57 @@
 const settings = {
     eventInfo: {
         dateTime: '2024-02-24T22:00:00Z',
+
         rsvp: {
+            dateTime: '2023-12-16T16:00:00',
             name: 'Terraza el Tejaban',
             address: 'Independencia #20. 45235 Zapopan, Jalisco, México',
+            addressLink: 'https://maps.app.goo.gl/zfXjQA344JyibCbs5',
             image: './img/place_photo.jpeg'
-        }
+        },
+
     },
     bride: {
         name: 'Cesia'
     },
     groom: {
         name: 'Abdiel'
-    }
+    },
+
+    sections: [
+        'my-header-section',
+        'my-countdown-section',
+        'my-story-section',
+        'my-carousel-section',
+        'my-rsvp-section',
+        'my-ceremony-section',
+        'my-gifts-section',
+        'my-congirmation-section',
+        'my-hotels-section',
+        'my-footer-section'
+    ]
 }
 
 function onInit() {
+    showMySections(settings);
     setTitlePage(settings);
     setCoupleNames(settings);
     setWeedingDate(settings.eventInfo.dateTime);
     initCountdown(settings.eventInfo.dateTime);
-    setWeedingHour(settings.eventInfo.dateTime);
+
     loadImages();
     initScollElements();
     initCarousel();
     setRsvpInfo(settings);
+}
+
+function showMySections(settings) {
+    settings.sections.forEach(sectionId => {
+        const sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+            sectionElement.style.display = 'block';
+        }
+    });
 }
 
 function setTitlePage(settings) {
@@ -41,13 +68,27 @@ function setCoupleNames(settings) {
 }
 
 function setRsvpInfo(settings) {
-    const rsvpTitle = document.getElementById('rsvpTitle');
-    const rsvpAddress = document.getElementById('rsvpAddress');
-    const rsvpImage = document.getElementById('rsvpImage');
 
-    rsvpTitle.innerHTML = settings.eventInfo.rsvp.name;
-    rsvpAddress.innerHTML = settings.eventInfo.rsvp.address;
-    rsvpImage.src = settings.eventInfo.rsvp.image;        
+    const setInfo = (placeInfo, selector) => {
+        const rsvpTitle = document.getElementById(`${selector}Title`);
+        const rsvpAddress = document.getElementById(`${selector}Address`);
+        const rsvpLink = document.getElementById(`${selector}Link`);
+        const rsvpImage = document.getElementById(`${selector}Image`);
+
+        rsvpTitle.innerHTML = placeInfo.name;
+        rsvpAddress.innerHTML = placeInfo.address;
+        rsvpLink.href = placeInfo.addressLink;
+
+        if (placeInfo.image) {
+            rsvpImage.src = placeInfo.image;
+        } else {
+            rsvpImage.hidden = true;
+        }
+
+        setWeedingHour(placeInfo.dateTime, `${selector}Hour`);
+    }
+
+    setInfo(settings.eventInfo.rsvp, 'rsvp');
 }
 
 function initCountdown(date) {
@@ -111,9 +152,11 @@ function setWeedingDate(date) {
     weddingDateElement.innerHTML = formatDate(date);
 }
 
-function setWeedingHour(date) {
-    const weddingHourElement = document.getElementById('weddingHour');
-    weddingHourElement.innerHTML = convertUTCtoLocalTime(date)
+function setWeedingHour(date, selector) {
+    const weddingHourElement = document.getElementById(selector);
+    if (weddingHourElement) {
+        weddingHourElement.innerHTML = convertUTCtoLocalTime(date)
+    }
 }
 
 function loadImages() {
@@ -165,6 +208,23 @@ function initCarousel() {
         photoWrapper.style.transform = `translateX(-${distanceFromTop}px)`;
         if (carouselShown) {
         }
+    });
+
+    const photos = document.querySelectorAll('.photo');
+
+    photos.forEach(photo => {
+        photo.addEventListener('click', function () {
+            const enlargedPhoto = document.getElementById('enlargedPhoto');
+            enlargedPhoto.src = this.querySelector('img').src;
+
+            const modal = document.getElementById('photoModal');
+            modal.style.display = 'block';
+
+            const closeBtn = document.querySelector('.close');
+            closeBtn.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+        });
     });
 }
 

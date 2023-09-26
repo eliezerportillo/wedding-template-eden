@@ -4,24 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesia & Abdiel</title>
+    <meta property="og:title" content="Nuestra Boda | Cesia y Abdiel">
+    <meta property="og:description" content="24 de febrero de 2024">
+    <meta property="og:image" content="https://chesia.web.app/img/preview_photo.jpg">
+    
+    <title>Nuestra boda</title>
     <link rel="stylesheet" href="styles/fonts.css"> <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="styles/styles.css"> <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="styles/photo.modal.css">
 
 </head>
 
 <body>
 
     <!-- Header -->
-    <section class="header-section">
+    <section id="my-header-section" class="my-section header-section">
         <div class="overlay fx-row ">
             <div class="fx-flex"></div>
             <div class="fx-flex"></div>
             <div class="fx-flex names">
                 <h1 class=" fx-column fx-start">
-                    <span>Cesia</span>
+                    <span id="brideName"></span>
                     <span class="ml-10">
-                        <span class="superindice">&</span><span>Abdiel</span>
+                        <span class="superindice">&</span><span id="groomName"></span>
                     </span>
                 </h1>
             </div>
@@ -29,7 +34,7 @@
     </section>
 
     <!-- Countdown -->
-    <section class="countdown-section">
+    <section id="my-countdown-section" class="my-section countdown-section">
         <div class="inner-space section-tone-1">
             <h2 class="title-1">Nuestra Boda</h2>
             <span id="weddingDate" class="font-retro"></span>
@@ -53,7 +58,7 @@
     </section>
 
     <!-- our story -->
-    <section class="container">
+    <section id="my-story-section" class="my-section container">
 
         <div class="inner-space story-section accent">
             <div>
@@ -73,12 +78,12 @@
                 </div>
                 <div class="story-text">
 
-                    <p>Todo comienza un 24 de julio del 2021, dónde comenzó una relación y
+                    <p>Todo comienza un 24 de julio del 2021, donde comenzó una relación y
                         el incio de muchos planes que Dios preparó para los dos. Una relación
-                        dónde la distancia era inevitable pero la voluntad de querernos y algún
+                        donde la distancia era inevitable pero la voluntad de querernos y algún
                         día estar juntos para siempre era aún más fuerte.</p>
-                    <p>Un jueves 26 de febrero del 2023, a la orilla de la bella playa de
-                        Cozumel, dimos el "Si" dónde sabíamos que a partir de ahí un nuevo
+                    <p>Un jueves 26 de enero del 2023, a la orilla de la bella playa de
+                        Cozumel, dimos el "Si" donde sabíamos que a partir de ahí un nuevo
                         camino con nuevos sueños y nuevos retos iban a llegar a nuestras vidas
                         pero sabíamos que siempre estando el uno con el otro, tomados de las
                         manos de Dios, nada podrá detenernos.</p>
@@ -92,36 +97,31 @@
     </section>
 
     <!-- Gallery -->
-    <!-- <section class="photo-grid ">        
-        <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-        <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-        <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-        <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
-    </section> -->
-
-    <section class="photo-carousel">
+    <section id="my-carousel-section" class="my-section photo-carousel">
         <div class="photo-wrapper">
-            <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-            <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-            <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-            <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
-            <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-            <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-            <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-            <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
-            <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-            <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-            <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-            <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
-            <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-            <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-            <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-            <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
+            <div class="photo"><img data-src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
+            <div class="photo"><img data-src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
+            <div class="photo"><img data-src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
+            <div class="photo"><img data-src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
+            <div class="photo"><img data-src="./img/photo_grid_5.jpg" alt="Photo 5"></div>
+            <div class="photo"><img data-src="./img/photo_grid_6.jpg" alt="Photo 6"></div>
+            <div class="photo"><img data-src="./img/photo_grid_7.jpg" alt="Photo 7"></div>
+            <div class="photo"><img data-src="./img/photo_grid_8.jpg" alt="Photo 8"></div>
+            <div class="photo"><img data-src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
+            <div class="photo"><img data-src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
+            <div class="photo"><img data-src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
+            <div class="photo"><img data-src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
+            <div class="photo"><img data-src="./img/photo_grid_5.jpg" alt="Photo 5"></div>
+            <div class="photo"><img data-src="./img/photo_grid_6.jpg" alt="Photo 6"></div>
+            <div class="photo"><img data-src="./img/photo_grid_7.jpg" alt="Photo 7"></div>
+            <div class="photo"><img data-src="./img/photo_grid_8.jpg" alt="Photo 8"></div>
         </div>
     </section>
 
+
+
     <!-- RSVP -->
-    <section class="rsvp-section">
+    <section id="my-rsvp-section" class="my-section rsvp-section">
         <div class="inner-space section-tone-2 accent" style="margin-top: -4px;">
             <div class="fx-column hidden">
                 <div>
@@ -135,27 +135,27 @@
 
         <div class="inner-space section-tone-1 rsvp-content">
             <div class="rsvp-text">
-                <span class="rsvp-title">Terraza el Tejaban</span>
-                <span class="rsvp-address">Independencia #20. 45235 Zapopan, Jalisco, México</span>
+                <span id="rsvpTitle" class="rsvp-title"></span>
+                <span id="rsvpAddress" class="rsvp-address"></span>
                 <div class="rsvp-hour">
                     <span>Hora: </span>
-                    <span id="weddingHour"></span>
+                    <span id="rsvpHour"></span>
                 </div>
                 <div class="rsvp-button">
-                    <a href="https://maps.app.goo.gl/MXtgRLuuPYEogQt9A" class="font-retro" target="_blank">Ver Mapa</a>
+                    <a id="rsvpLink" href="https://maps.app.goo.gl/MXtgRLuuPYEogQt9A" class="font-retro"
+                        target="_blank">Ver Mapa</a>
                 </div>
             </div>
             <div class="rsvp-image">
-                <img data-src="./img/place_photo.jpeg" alt="Foto del lugar">
+                <img id="rsvpImage" alt="Foto del lugar">
             </div>
 
         </div>
 
     </section>
 
-
     <!-- Gifts -->
-    <section class="container">
+    <section id="my-gifts-section" class="my-section container">
 
         <div class="inner-space gift-section accent">
 
@@ -195,8 +195,7 @@
     </section>
 
     <!-- Confirmation -->
-    
-    <section>
+    <section id="my-congirmation-section" class="my-section">
         <div class="confirmation-section parallax">
             <div class="container">
                 <div class="overlay fx-column  ">
@@ -220,45 +219,44 @@
         </div>
     </section>
 
-
-
     <!-- Hotels -->
-    <section class="hotels-section fx-column hidden">
+    <section id="my-hotels-section" class="my-section">
+        <div class="hotels-section fx-column hidden">
 
-        <div>
-            <span class="title-1 accent">Sugerencias de</span>
-            <br>
-            <span class="title-2 accent" style="margin-left: 110px;">Hospedaje</span>
+            <div>
+                <span class="title-1 accent">Sugerencias de</span>
+                <br>
+                <span class="title-2 accent" style="margin-left: 110px;">Hospedaje</span>
+            </div>
+
+            <ul class="hotel-items">
+                <li>
+                    <p>City Express Plus by Marriot <br>Guadalajara Palomar</p>
+                    <a class="pill pill-small " href="https://maps.app.goo.gl/CATogBm2qXoJynQ46" target="_blank">Ver
+                        mapa</a>
+                </li>
+                <li>
+                    <p>Microtel Inn & Suits by <br>Wyndham Guadalajara Sur</p>
+                    <a class="pill pill-small " href="https://maps.app.goo.gl/UjNMhFTZEELiPrJ59" target="_blank">Ver
+                        mapa</a>
+                </li>
+                <li>
+                    <p>Hotel Marquiz</p>
+                    <a class="pill pill-small " href="https://maps.app.goo.gl/MMKZqws3uz5RB5eQ6" target="_blank">Ver
+                        mapa</a>
+                </li>
+                <li>
+                    <p>Ramada Encore Guadalajra Sur</p>
+                    <a class="pill pill-small " href="https://maps.app.goo.gl/v4FWWHQpMEMhumqv8" target="_blank">Ver
+                        mapa</a>
+                </li>
+            </ul>
+
+
         </div>
-
-        <ul class="hotel-items">
-            <li>
-                <p>City Express Plus by Marriot <br>Guadalajara Palomar</p>
-                <a class="pill pill-small " href="https://maps.app.goo.gl/CATogBm2qXoJynQ46" target="_blank">Ver
-                    mapa</a>
-            </li>
-            <li>
-                <p>Microtel Inn & Suits by <br>Wyndham Guadalajara Sur</p>
-                <a class="pill pill-small " href="https://maps.app.goo.gl/UjNMhFTZEELiPrJ59" target="_blank">Ver
-                    mapa</a>
-            </li>
-            <li>
-                <p>Hotel Marquiz</p>
-                <a class="pill pill-small " href="https://maps.app.goo.gl/MMKZqws3uz5RB5eQ6" target="_blank">Ver
-                    mapa</a>
-            </li>
-            <li>
-                <p>Ramada Encore Guadalajra Sur</p>
-                <a class="pill pill-small " href="https://maps.app.goo.gl/v4FWWHQpMEMhumqv8" target="_blank">Ver
-                    mapa</a>
-            </li>
-        </ul>
-
-
     </section>
-
     <!-- Footer -->
-    <footer>
+    <footer id="my-footer-section" class="my-section">
         <div class="inner-space section-tone-2 accent">
             <div>
                 <span>Utiliza el hashtag #BodaChesia</span>
@@ -272,19 +270,22 @@
 
     </footer>
 
+    <!-- Modal's photo -->
+    <div id="photoModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+
+            <img id="enlargedPhoto">
+        </div>
+    </div>
+
     <script src="index.js"></script> <!-- Link to your custom JS script -->
     <script>
-        const eventInfo = {
-            date: '2024-02-24T22:00:00Z'
-        };
+
 
 
         document.addEventListener('DOMContentLoaded', function () {
-            setWeedingDate(eventInfo.date);
-            initCountdown(eventInfo.date);
-            loadImages();
-            initScollElements();
-            initCarousel();            
+            onInit();
         });
     </script>
 </body>
