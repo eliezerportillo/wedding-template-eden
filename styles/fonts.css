@@ -1,0 +1,16 @@
+/* Add your custom CSS styles here */
+/* For custom fonts, use @font-face to import them */
+@font-face {
+    font-family: 'Baskvill';
+    src: url('../fonts/BASKVILL.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'SacredValley';
+    src: url('../fonts/Sacred_Valley.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RetroSignature';
+    src: url('../fonts/retro-signature.regular.otf') format('opentype');
+}

@@ -1,0 +1,909 @@
+:root {
+    --primary-color: #b99b80;
+    --secondary-color: #ffeedf;
+    --accent-color: #8f6450;
+}
+
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.primary {
+    color: var(--primary-color);
+}
+
+.secondary {
+    color: var(--secondary-color);
+}
+
+.accent {
+    color: var(--accent-color);
+}
+
+
+body {
+    font-family: 'Baskvill', sans-serif;
+    margin: 0;
+    font-weight: lighter;
+    color: var(--primary-color)
+}
+
+
+.header-section {
+    position: relative;
+    background-image: url('../img/header.jpg');
+    background-size: 112%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-position-y: -6.25rem;
+    height: 12.5rem;
+
+
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+
+
+
+}
+
+.fx-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fx-wrap {
+    flex-wrap: wrap;
+}
+
+.fx-flex {
+    flex: 1;
+}
+
+.fx-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fx-start {
+    box-sizing: border-box;
+    place-content: flex-start;
+    align-items: flex-start;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: lighter;
+    margin: 0;
+}
+
+.title-1 {
+    font-size: 1.5625rem;
+    font-family: 'SacredValley', sans-serif;
+}
+
+.title-2 {
+    font-size: 2.875rem;
+    font-family: 'RetroSignature', sans-serif;
+    line-height: 1.375rem;
+}
+
+
+
+.superindice {
+    font-size: 0.8em;
+    /* Ajusta el tamaño según tus preferencias */
+    vertical-align: text-top;
+}
+
+.ml-10 {
+    margin-left: 1.9375rem;
+}
+
+
+
+.countdown-section {
+    text-align: center;
+}
+
+
+.inner-space {
+    padding: 1.25rem 0;
+}
+
+.section-tone-1 {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+
+.section-tone-2 {
+    background-color: var(--secondary-color);
+}
+
+#weddingDate {
+    font-size: 3rem;
+}
+
+.font-retro {
+    font-family: 'RetroSignature', sans-serif;
+    font-size: 2rem;
+}
+
+.counter-text {
+    font-family: 'Baskvill';
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+
+.story-section .story-title {
+    margin: 0 1rem;
+}
+
+.story-section .story-title,
+.story-section .story-text,
+.story-section .story-image {
+    padding-top: 2rem;
+}
+
+.container p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.story-title {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center flex-end;
+    align-items: center;
+}
+
+
+.story-image {
+    max-width: 18.75rem;
+}
+
+.story-text {
+    text-align: justify;
+}
+
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.effect {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+.photo-carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.photo-wrapper {
+    display: inline-flex;
+    transition: transform 0.5s ease-out;
+}
+
+.photo-carousel .photo {
+    flex: 0 0 25%;
+    /* Ajusta el ancho de cada foto según tus necesidades */
+
+    /* Espacio entre fotos */
+}
+
+.photo-carousel .photo img {
+    max-width: 100%;
+}
+
+
+
+
+
+.names {
+    font-size: 1.375rem;
+    display: inline-block;
+    line-height: 1.375rem;
+    font-family: 'SacredValley', sans-serif;
+}
+
+.story-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.rsvp-content {
+
+    font-family: 'SacredValley', sans-serif;
+    padding: 1rem 2rem;
+}
+
+.rsvp-title {
+    font-size: 2.58rem;
+}
+
+.rsvp-text {
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;
+    max-width: 100%;
+    text-align: center;
+}
+
+.rsvp-address {
+
+    font-size: .9rem;
+    line-height: 2rem;
+}
+
+.rsvp-hour {
+    font-size: 1.78rem;
+    padding: 0.625rem 0;
+    text-align: right;
+
+    border: 0.0625rem solid var(--secondary-color);
+    border-right: none;
+    border-left: none;
+}
+
+.rsvp-button {
+    text-align: right;
+    margin: 0.5rem 0;
+}
+
+.rsvp-button a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.rsvp-image {
+    text-align: center;
+}
+
+
+
+
+.gift-section {
+    height: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;
+    max-width: 100%;
+    gap: 2rem;
+}
+
+.gift-section .gift-options {
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.gift-option {
+    height: 18.75rem;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.gift-option .gift-option-title {
+    font-size: 3.5rem;
+
+}
+
+.gift-option .gift-option-name {
+    font-size: 1.4rem;
+    text-align: center;
+    height: 3.25rem;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+
+}
+
+
+.gift-section a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.gift-section p {
+    text-align: center;
+
+}
+
+.gift-section .h-separator {
+    width: 20%;
+    border: 0.0625rem solid var(--accent-color);
+    border-right: none;
+    border-left: none;
+}
+
+.gift-section .v-separator {
+    height: 18.75rem;
+    border: 0.0625rem solid var(--accent-color);
+}
+
+.gift-option {
+    min-width: 17.375rem;
+}
+
+.gift-option img {
+    max-width: 11.25rem;
+}
+
+
+.confirmation-section {
+    position: relative;
+    background-image: url('../img/confirmation.jpg');
+    background-size: 185%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    height: 25rem;
+}
+
+.confirmation-section .overlay {
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, .66);
+    text-align: center;
+}
+
+.pill {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 1.5625rem;
+    cursor: pointer;
+    font-family: 'RetroSignature';
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.pill-small {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.5rem;
+}
+
+.parallax-container .pill {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.hotels-section {
+    margin: 4rem 0;
+}
+
+.hotels-section .hotel-items {
+    height: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;
+    max-width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.625rem;
+}
+
+.grid-item {
+    padding: 1.25rem;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;    
+    height: 25rem;
+}
+
+.parallax-container .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.parallax-container .parallax img {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+/* Extra small devices (phones, portrait) */
+@media only screen and (max-width: 767px) {
+
+    /* CSS for phones in portrait mode */
+    .h-separator {
+        display: block;
+    }
+
+    .v-separator {
+        display: none;
+    }
+
+    .br {
+        display: none;
+    }
+}
+
+
+/* Extra small devices (phones, landscape) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+
+    /* CSS for phones in landscape mode */
+    .header-section {
+        background-size: cover;
+        background-size: 116%;
+        background-position-y: -12.5rem;
+        height: 25.625rem;
+    }
+
+    .names {
+        font-size: 2.1rem;
+        display: inline-block;
+        line-height: 2.1875rem;
+    }
+
+    .ml-10 {
+        margin-left: 2.875rem;
+    }
+
+    .story-section {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-evenly;
+        align-items: center;
+    }
+
+    .rsvp-content {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: flex-start space-evenly;
+        align-items: center;
+    }
+
+    .gift-section .gift-options {
+        height: 100%;
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-evenly;
+        align-items: stretch;
+    }
+
+    .confirmation-section {
+        height: 25.625rem;
+
+        background-size: 120%;
+
+        background-position-x: left;
+        background-position-y: bottom;
+    }
+
+    .hotels-section .hotel-items {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-between;
+        align-items: center;
+        flex-flow: wrap;
+        gap: 2rem
+    }
+
+    .hotels-section .hotel-items p {
+        min-height: 2.25rem;
+    }
+
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    /* CSS for tablets */
+    .header-section {
+        background-size: cover;
+        background-size: 120%;
+        background-position-y: -20.75rem;
+        height: 31.875rem;
+    }
+
+    .names {
+        font-size: 3.5rem;
+        display: inline-block;
+        line-height: 3.5rem;
+    }
+
+    .ml-10 {
+        margin-left: 5rem;
+    }
+
+    .story-section {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-evenly;
+        align-items: center;
+    }
+
+    .rsvp-content {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .gift-section .gift-options {
+        height: 100%;
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-evenly;
+        align-items: stretch;
+    }
+
+    .confirmation-section {
+        height: 25.625rem;
+
+        background-size: 120%;
+
+        background-position-x: left;
+        background-position-y: bottom;
+    }
+
+    .hotels-section .hotel-items {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-between;
+        align-items: center;
+        flex-flow: wrap;
+        gap: 2rem
+    }
+
+    .hotels-section .hotel-items p {
+        min-height: 2.25rem;
+    }
+}
+
+/* Medium devices (small PCs and desktops) */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    /* CSS for small PCs/desktops */
+
+    .header-section {
+        background-size: cover;
+        background-size: 100%;
+        background-position-y: -25rem;
+        height: 31.875rem;
+    }
+
+    .names {
+        font-size: 3.5rem;
+        display: inline-block;
+        line-height: 3.5rem;
+    }
+
+    .ml-10 {
+        margin-left: 5rem;
+    }
+
+    .story-section {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center center;
+        align-items: center;
+    }
+
+    .rsvp-content {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        gap: 2rem
+    }
+
+    .gift-section .gift-options {
+        height: 100%;
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-evenly;
+        align-items: stretch;
+    }
+
+    .confirmation-section {
+        height: 25.625rem;
+
+        background-size: 120%;
+
+        background-position-x: left;
+        background-position-y: -71.875rem;
+    }
+
+    .hotels-section .hotel-items {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-between;
+        align-items: center;
+        flex-flow: wrap;
+        gap: 2rem
+    }
+
+    .hotels-section .hotel-items p {
+        min-height: 2.25rem;
+    }
+
+}
+
+/* Large devices (large PCs and desktops) */
+@media only screen and (min-width: 1600px) {
+
+    /* CSS for large PCs/desktops */
+    .header-section {
+        background-size: cover;
+        background-size: 100%;
+        background-position-y: -27rem;
+        height: 44.375rem;
+    }
+
+    .names {
+        font-size: 3.5rem;
+        display: inline-block;
+        line-height: 3.5rem;
+    }
+
+    .ml-10 {
+        margin-left: 5rem;
+    }
+
+    .story-section {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center center;
+        align-items: center;
+
+        padding: 5rem 0;
+    }
+
+    .rsvp-content {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        gap: 2rem
+    }
+
+    .gift-section .gift-options {
+        height: 100%;
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-evenly;
+        align-items: stretch;
+    }
+
+    .confirmation-section {
+        height: 25.625rem;
+
+        background-size: 115%;
+
+        background-position-x: left;
+        background-position-y: -97.0625rem;
+    }
+
+    .hotels-section .hotel-items {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-between;
+        align-items: center;
+        flex-flow: wrap;
+        gap: 2rem
+    }
+
+    .hotels-section .hotel-items p {
+        min-height: 2.25rem;
+    }
+}
+
+/* Large devices (large PCs and desktops) */
+@media only screen and (min-width: 2400px) {
+
+    /* CSS for large PCs/desktops */
+    .header-section {
+        background-size: cover;
+        background-size: 100%;
+        background-position-y: -51rem;
+        height: 44.375rem;
+    }
+
+    .names {
+        font-size: 3.5rem;
+        display: inline-block;
+        line-height: 3.5rem;
+    }
+
+    .ml-10 {
+        margin-left: 5rem;
+    }
+
+    .story-section {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center center;
+        align-items: center;
+
+        padding: 5rem 0;
+    }
+
+    .rsvp-content {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center;
+        align-items: center;
+        gap: 2rem
+    }
+
+    .gift-section .gift-options {
+        height: 100%;
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-evenly;
+        align-items: stretch;
+    }
+
+    .confirmation-section {
+        height: 25.625rem;
+
+        background-size: 100%;
+
+        background-position-x: left;
+        background-position-y: -130rem;
+    }
+
+    .hotels-section .hotel-items {
+
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: center space-between;
+        align-items: center;
+        flex-flow: wrap;
+        gap: 2rem
+    }
+
+    .hotels-section .hotel-items p {
+        min-height: 2.25rem;
+    }
+}
+
+
+/* Styles for screens greater than mobile */
+@media only screen and (min-width: 768px) {
+
+    /* Add your styles here */
+    .h-separator {
+        display: none;
+    }
+
+    .v-separator {
+        display: block;
+    }
+}
