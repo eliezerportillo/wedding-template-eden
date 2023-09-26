@@ -1,4 +1,54 @@
+const settings = {
+    eventInfo: {
+        dateTime: '2024-02-24T22:00:00Z',
+        rsvp: {
+            name: 'Terraza el Tejaban',
+            address: 'Independencia #20. 45235 Zapopan, Jalisco, México',
+            image: './img/place_photo.jpeg'
+        }
+    },
+    bride: {
+        name: 'Cesia'
+    },
+    groom: {
+        name: 'Abdiel'
+    }
+}
 
+function onInit() {
+    setTitlePage(settings);
+    setCoupleNames(settings);
+    setWeedingDate(settings.eventInfo.dateTime);
+    initCountdown(settings.eventInfo.dateTime);
+    setWeedingHour(settings.eventInfo.dateTime);
+    loadImages();
+    initScollElements();
+    initCarousel();
+    setRsvpInfo(settings);
+}
+
+function setTitlePage(settings) {
+    document.title += ` | ${settings.bride.name} & ${settings.groom.name}`;
+}
+
+
+function setCoupleNames(settings) {
+    const groomElement = document.getElementById('groomName');
+    const brideElement = document.getElementById('brideName');
+
+    groomElement.innerHTML = settings.groom.name;
+    brideElement.innerHTML = settings.bride.name;
+}
+
+function setRsvpInfo(settings) {
+    const rsvpTitle = document.getElementById('rsvpTitle');
+    const rsvpAddress = document.getElementById('rsvpAddress');
+    const rsvpImage = document.getElementById('rsvpImage');
+
+    rsvpTitle.innerHTML = settings.eventInfo.rsvp.name;
+    rsvpAddress.innerHTML = settings.eventInfo.rsvp.address;
+    rsvpImage.src = settings.eventInfo.rsvp.image;        
+}
 
 function initCountdown(date) {
     const weddingDate = new Date(date).getTime();
@@ -58,10 +108,12 @@ function convertUTCtoLocalTime(utcDateString) {
 
 function setWeedingDate(date) {
     const weddingDateElement = document.getElementById('weddingDate');
-    const weddingHourElement = document.getElementById('weddingHour');
     weddingDateElement.innerHTML = formatDate(date);
-    weddingHourElement.innerHTML = convertUTCtoLocalTime(date)
+}
 
+function setWeedingHour(date) {
+    const weddingHourElement = document.getElementById('weddingHour');
+    weddingHourElement.innerHTML = convertUTCtoLocalTime(date)
 }
 
 function loadImages() {
