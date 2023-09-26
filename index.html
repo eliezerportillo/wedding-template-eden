@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesia & Abdiel</title>
+    <title>Nuestra boda</title>
     <link rel="stylesheet" href="styles/fonts.css"> <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="styles/styles.css"> <!-- Link to your custom CSS -->
 
@@ -19,9 +19,9 @@
             <div class="fx-flex"></div>
             <div class="fx-flex names">
                 <h1 class=" fx-column fx-start">
-                    <span>Cesia</span>
+                    <span id="brideName"></span>
                     <span class="ml-10">
-                        <span class="superindice">&</span><span>Abdiel</span>
+                        <span class="superindice">&</span><span id="groomName"></span>
                     </span>
                 </h1>
             </div>
@@ -135,8 +135,8 @@
 
         <div class="inner-space section-tone-1 rsvp-content">
             <div class="rsvp-text">
-                <span class="rsvp-title">Terraza el Tejaban</span>
-                <span class="rsvp-address">Independencia #20. 45235 Zapopan, Jalisco, México</span>
+                <span id="rsvpTitle" class="rsvp-title"></span>
+                <span id="rsvpAddress" class="rsvp-address"></span>
                 <div class="rsvp-hour">
                     <span>Hora: </span>
                     <span id="weddingHour"></span>
@@ -146,7 +146,7 @@
                 </div>
             </div>
             <div class="rsvp-image">
-                <img data-src="./img/place_photo.jpeg" alt="Foto del lugar">
+                <img id="rsvpImage" alt="Foto del lugar">
             </div>
 
         </div>
@@ -195,7 +195,7 @@
     </section>
 
     <!-- Confirmation -->
-    
+
     <section>
         <div class="confirmation-section parallax">
             <div class="container">
@@ -274,17 +274,11 @@
 
     <script src="index.js"></script> <!-- Link to your custom JS script -->
     <script>
-        const eventInfo = {
-            date: '2024-02-24T22:00:00Z'
-        };
+
 
 
         document.addEventListener('DOMContentLoaded', function () {
-            setWeedingDate(eventInfo.date);
-            initCountdown(eventInfo.date);
-            loadImages();
-            initScollElements();
-            initCarousel();            
+            onInit();
         });
     </script>
 </body>
