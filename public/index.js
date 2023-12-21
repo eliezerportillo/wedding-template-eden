@@ -1,4 +1,78 @@
+const settings = {
+    eventInfo: {
+        tagline: '¡Nos Casamos!',
+        dateTime: '2024-01-27T22:00:00Z',
+        ceremony: {
+            name: 'CEREMONIA',
+            address: 'Primera IAFJ',
+            image: './img/church.png',
+            hour: '3:00 PM',
+            url: "https://maps.app.goo.gl/mXkvo94tB7pT32f8A"
+        },
+        rsvp: {
+            name: 'SALÓN',
+            address: 'Cielito Mío',
+            image: './img/location.png',
+            hour: '5:00 PM',
+            url: "https://maps.app.goo.gl/hHtUwRvvUKDTyiDf7"
+        },
+    },
+    bride: {
+        name: 'Keren'
+    },
+    groom: {
+        name: 'Ángel'
+    }
+}
 
+function onInit() {
+    setTitlePage(settings);
+    setCoupleNames(settings);
+    setWeedingDate(settings.eventInfo.dateTime);
+    initCountdown(settings.eventInfo.dateTime);
+    setWeedingHour(settings.eventInfo.ceremony.hour);
+    setCocktailHour(settings.eventInfo.rsvp.hour);
+    loadImages();
+    initScollElements();
+    setRsvpInfo(settings);
+}
+
+function setTitlePage(settings) {
+    document.title += ` | ${settings.bride.name} & ${settings.groom.name}`;
+    const titleElement = document.getElementById('tagline');
+    titleElement.innerHTML = settings.eventInfo.tagline;
+}
+
+
+function setCoupleNames(settings) {
+    const groomElement = document.getElementById('groomName');
+    const brideElement = document.getElementById('brideName');
+
+    groomElement.innerHTML = settings.groom.name;
+    brideElement.innerHTML = settings.bride.name;
+}
+
+function setRsvpInfo(settings) {
+    const rsvpTitle = document.getElementById('rsvpTitle');
+    const rsvpAddress = document.getElementById('rsvpAddress');
+    const rsvpImage = document.getElementById('rsvpImage');
+    const rsvpMapLink = document.getElementById('rsvpMapLink');
+
+    const ceremonyTitle = document.getElementById('ceremonyTitle');
+    const ceremonyAddress = document.getElementById('ceremonyAddress');
+    const ceremonyImage = document.getElementById('ceremonyImage');
+    const ceremonyMapLink = document.getElementById('ceremonyMapLink');
+
+    rsvpTitle.innerHTML = settings.eventInfo.rsvp.name;
+    rsvpAddress.innerHTML = settings.eventInfo.rsvp.address;
+    rsvpImage.src = settings.eventInfo.rsvp.image;
+    rsvpMapLink.href = settings.eventInfo.rsvp.url;
+
+    ceremonyTitle.innerHTML = settings.eventInfo.ceremony.name;
+    ceremonyAddress.innerHTML = settings.eventInfo.ceremony.address;
+    ceremonyImage.src = settings.eventInfo.ceremony.image;
+    ceremonyMapLink.href = settings.eventInfo.ceremony.url;
+}
 
 function initCountdown(date) {
     const weddingDate = new Date(date).getTime();
@@ -15,10 +89,12 @@ function initCountdown(date) {
         const daysElement = document.getElementById('countdown-days');
         const hoursElement = document.getElementById('countdown-hours');
         const minutesElement = document.getElementById('countdown-minutes');
+        const secondsElement = document.getElementById('countdown-seconds');
 
         daysElement.innerHTML = days;
         hoursElement.innerHTML = hours;
         minutesElement.innerHTML = minutes;
+        secondsElement.innerHTML = seconds;
     }
 
     setInterval(updateCountdown, 1000);
@@ -58,10 +134,17 @@ function convertUTCtoLocalTime(utcDateString) {
 
 function setWeedingDate(date) {
     const weddingDateElement = document.getElementById('weddingDate');
-    const weddingHourElement = document.getElementById('weddingHour');
     weddingDateElement.innerHTML = formatDate(date);
-    weddingHourElement.innerHTML = convertUTCtoLocalTime(date)
+}
 
+function setWeedingHour(hour) {
+    const weddingHourElement = document.getElementById('ceremonyHour');
+    weddingHourElement.innerHTML = hour
+}
+
+function setCocktailHour(hour) {
+    const weddingHourElement = document.getElementById('cocktailHour');
+    weddingHourElement.innerHTML = hour
 }
 
 function loadImages() {
@@ -124,4 +207,13 @@ function isInViewport(element) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+}
+
+function showImage(imageSrc) {
+    document.getElementById('fullImage').src = imageSrc;
+    document.getElementById('overlay').style.display = 'flex';
+}
+
+function hideImage() {
+    document.getElementById('overlay').style.display = 'none';
 }

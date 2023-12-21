@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #b99b80;
-    --secondary-color: #ffeedf;
-    --accent-color: #8f6450;
+    --primary-color: #907967;
+    --secondary-color: #dcd5d0;
+    --accent-color: #864e37;
 }
 
 
@@ -35,6 +35,10 @@
     }
 }
 
+.effect-1 {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 .primary {
     color: var(--primary-color);
 }
@@ -49,24 +53,58 @@
 
 
 body {
-    font-family: 'Baskvill', sans-serif;
+    font-family: 'Nostalgia', sans-serif;
     margin: 0;
     font-weight: lighter;
-    color: var(--primary-color)
+    color: var(--primary-color);
+    letter-spacing: 2px;
 }
 
 
 .header-section {
     position: relative;
     background-image: url('../img/header.jpg');
-    background-size: 112%;
+    background-size: 130%;
     background-repeat: no-repeat;
     background-position: top center;
-    background-position-y: -6.25rem;
-    height: 12.5rem;
-
-
+    height: calc(100vh - (78px + 75px));
 }
+
+.banner-1 {
+    position: relative;
+    background-image: url('../img/photo_banner.jpg');
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: calc(100vh - (78px + 75px));
+}
+
+.place-photos {
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;
+}
+
+.place-photos img {
+    width: 100%;
+}
+
+.parents {
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.parents ul {
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+
 
 
 .overlay {
@@ -76,8 +114,7 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
-    color: #fff;
-
+    padding: 1rem;
 
 
 }
@@ -98,10 +135,16 @@ body {
 }
 
 .fx-column {
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    box-sizing: border-box;
+    place-content: center;
     align-items: center;
+}
+
+.fx-space-between {
+    justify-content: space-between;
 }
 
 .fx-start {
@@ -119,21 +162,22 @@ h5 {
     margin: 0;
 }
 
+.tagline {
+    font-size: 1.5625rem;
+}
+
 .title-1 {
     font-size: 1.5625rem;
-    font-family: 'SacredValley', sans-serif;
 }
 
 .title-2 {
-    font-size: 2.875rem;
-    font-family: 'RetroSignature', sans-serif;
-    line-height: 1.375rem;
+    font-size: 1.375rem;
 }
 
 
 
 .superindice {
-    font-size: 0.8em;
+    font-size: 0.5em;
     /* Ajusta el tamaño según tus preferencias */
     vertical-align: text-top;
 }
@@ -146,6 +190,15 @@ h5 {
 
 .countdown-section {
     text-align: center;
+    min-width: 300px;
+}
+
+.border-top {
+    border-top: 1px solid white;
+}
+
+.border-bottom {
+    border-bottom: 1px solid white;
 }
 
 
@@ -158,24 +211,29 @@ h5 {
     background-color: var(--primary-color);
 }
 
+.section-tone-3 {
+    color: white;
+    background-color: var(--accent-color);
+}
 
 .section-tone-2 {
     background-color: var(--secondary-color);
 }
 
 #weddingDate {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .font-retro {
-    font-family: 'RetroSignature', sans-serif;
-    font-size: 2rem;
+    font-family: 'Nostalgia', sans-serif;
+    line-height: 1rem;
 }
 
 .counter-text {
-    font-family: 'Baskvill';
+    font-family: 'Nostalgia';
     font-size: 2rem;
     padding: 0 1rem;
+    line-height: 1.9rem;
 }
 
 .story-section .story-title {
@@ -213,7 +271,9 @@ h5 {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
 }
 
 .effect {
@@ -231,7 +291,22 @@ h5 {
     height: auto;
 }
 
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
 
+#fullImage {
+    max-width: 80%;
+    max-height: 80%;
+}
 
 
 .photo-carousel {
@@ -244,26 +319,40 @@ h5 {
     transition: transform 0.5s ease-out;
 }
 
-.photo-carousel .photo {
-    flex: 0 0 25%;
-    /* Ajusta el ancho de cada foto según tus necesidades */
 
-    /* Espacio entre fotos */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
 }
 
-.photo-carousel .photo img {
-    max-width: 100%;
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
+.slide {
+    width: 100vw;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 2em;
+    text-align: center;
+    background-color: #ddd;
+}
 
 
 
 
 .names {
-    font-size: 1.375rem;
+    font-size: 2.8rem;
     display: inline-block;
-    line-height: 1.375rem;
     font-family: 'SacredValley', sans-serif;
+    margin: 0.5rem 0;
+}
+
+.text-shadow {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+
 }
 
 .story-section {
@@ -275,13 +364,25 @@ h5 {
 }
 
 .rsvp-content {
-
     font-family: 'SacredValley', sans-serif;
     padding: 1rem 2rem;
+
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center space-between;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.rsvp-content .title-1 {
+    font-size: 2.58rem;
+
 }
 
 .rsvp-title {
-    font-size: 2.58rem;
+    font-size: 2rem;
 }
 
 .rsvp-text {
@@ -292,26 +393,20 @@ h5 {
     align-items: stretch;
     max-width: 100%;
     text-align: center;
+    gap: 1rem;
 }
 
 .rsvp-address {
-
-    font-size: .9rem;
+    font-size: 1.9rem;
     line-height: 2rem;
 }
 
 .rsvp-hour {
     font-size: 1.78rem;
     padding: 0.625rem 0;
-    text-align: right;
-
-    border: 0.0625rem solid var(--secondary-color);
-    border-right: none;
-    border-left: none;
 }
 
 .rsvp-button {
-    text-align: right;
     margin: 0.5rem 0;
 }
 
@@ -324,6 +419,9 @@ h5 {
     text-align: center;
 }
 
+.rsvp-image img {
+    max-width: 100px;
+}
 
 
 
@@ -348,23 +446,22 @@ h5 {
 }
 
 .gift-option {
-    height: 18.75rem;
     flex-direction: column;
     box-sizing: border-box;
     display: flex;
     place-content: center;
     align-items: center;
+    gap: 1rem;
 }
 
 .gift-option .gift-option-title {
-    font-size: 3.5rem;
-
+    font-size: 1.59rem;
+    text-transform: uppercase;
 }
 
 .gift-option .gift-option-name {
     font-size: 1.4rem;
     text-align: center;
-    height: 3.25rem;
     flex-direction: column;
     box-sizing: border-box;
     display: flex;
@@ -384,11 +481,20 @@ h5 {
 
 }
 
-.gift-section .h-separator {
-    width: 20%;
-    border: 0.0625rem solid var(--accent-color);
+.h-separator {
+    min-width: 100px;
+    width: 40%;
+    border: 0.062rem solid var(--accent-color);
     border-right: none;
     border-left: none;
+}
+
+.h-separator.white {
+    border-color: white;
+}
+
+.white {
+    color: white;
 }
 
 .gift-section .v-separator {
@@ -423,18 +529,19 @@ h5 {
 
 .pill {
     padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: #fff;
-    border-radius: 1.5625rem;
+    /* border-radius: 1.5625rem; */
     cursor: pointer;
-    font-family: 'RetroSignature';
-    font-size: 2.5rem;
+    font-family: 'Nostalgia';
+    /* font-size: 2.5rem; */
     text-decoration: none;
+    letter-spacing: 2px;
 }
 
 .pill-small {
     padding: 0.25rem 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .parallax-container .pill {
@@ -446,17 +553,26 @@ h5 {
 
 
 .hotels-section {
-    margin: 4rem 0;
-}
-
-.hotels-section .hotel-items {
-    height: 100%;
     flex-direction: column;
     box-sizing: border-box;
     display: flex;
-    place-content: stretch flex-start;
-    align-items: stretch;
-    max-width: 100%;
+    place-content: center;
+    align-items: center;
+}
+
+.hotels-section .icon {
+    width: 80px;
+    margin: 1rem 0;
+}
+
+.hotels-section .hotel-items {
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
 }
 
 .grid-container {
@@ -475,10 +591,24 @@ footer {
     text-align: center;
 }
 
+.center {
+    text-align: center;
+}
+
+.phrase {
+
+    position: relative;
+    background-image: url('../img/confirmation.jpg');
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: calc(100vh - (78px + 75px));
+}
+
 .parallax-container {
     position: relative;
-    overflow: hidden;    
-    height: 25rem;
+    overflow: hidden;
+    height: 500px;
 }
 
 .parallax-container .parallax {
@@ -491,16 +621,11 @@ footer {
 }
 
 .parallax-container .parallax img {
-    opacity: 0;
     position: absolute;
     left: 50%;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
 }
 
 

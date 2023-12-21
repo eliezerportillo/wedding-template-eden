@@ -2,15 +2,20 @@
 /* For custom fonts, use @font-face to import them */
 @font-face {
     font-family: 'Baskvill';
-    src: url('../fonts/BASKVILL.TTF') format('truetype');
+    src: url('../fonts/Nostalgia.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'SacredValley';
-    src: url('../fonts/Sacred_Valley.ttf') format('truetype');
+    src: url('../fonts/Nostalgia.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'RetroSignature';
-    src: url('../fonts/retro-signature.regular.otf') format('opentype');
+    src: url('../fonts/Nostalgia.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Nostalgia';
+    src: url('../fonts/Nostalgia.otf') format('opentype');
 }

@@ -1,6 +1,6 @@
 {
-    "name": "Cesia & Abdiel",
-    "short_name": "Chesia",
+    "name": "Keren & Ángel",
+    "short_name": "Nuestra Boda",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#b99b80",
-    "background_color": "#b99b80",
+    "theme_color": "#864e37",
+    "background_color": "#864e37",
     "display": "standalone"
 }

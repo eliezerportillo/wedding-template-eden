@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesia & Abdiel</title>
+    <meta property="og:title" content="¡Nos casamos! Keren & Ángel">
+    <meta property="og:description" content="Tu presencia es nuestro mayor regalo.">
+    <meta property="og:image" content="https://keren-angel.web.app/img/preview_photo.png">
+    <title>Keren & Angel</title>
     <link rel="stylesheet" href="styles/fonts.css"> <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="styles/styles.css"> <!-- Link to your custom CSS -->
 
@@ -13,255 +16,276 @@
 <body>
 
     <!-- Header -->
-    <section class="header-section">
-        <div class="overlay fx-row ">
-            <div class="fx-flex"></div>
-            <div class="fx-flex"></div>
-            <div class="fx-flex names">
-                <h1 class=" fx-column fx-start">
-                    <span>Cesia</span>
-                    <span class="ml-10">
-                        <span class="superindice">&</span><span>Abdiel</span>
-                    </span>
+    <section class="header-section white">
+        <div class="overlay fx-column fx-space-between text-shadow ">
+            <div>
+                <h2 id="tagline" class="tagline"></h2>
+
+                <h1 class="fx-column names">
+                    <div id="brideName"></div>
+                    <div style="margin-left: -22px;">
+                        <span class="superindice">&</span><span id="groomName"></span>
+                    </div>
                 </h1>
             </div>
-        </div>
-    </section>
-
-    <!-- Countdown -->
-    <section class="countdown-section">
-        <div class="inner-space section-tone-1">
-            <h2 class="title-1">Nuestra Boda</h2>
-            <span id="weddingDate" class="font-retro"></span>
-        </div>
-        <div class="inner-space section-tone-2 accent">
-            <div class="fx-row">
-                <div class="fx-column">
-                    <span id="countdown-days" class="counter-text"></span>
-                    <span class="font-retro">Dias</span>
+            <!-- Countdown -->
+            <section class="countdown-section">
+                <div class="">
+                    <span id="weddingDate"></span>
                 </div>
-                <div class="fx-column">
-                    <span id="countdown-hours" class="counter-text"></span>
-                    <span class="font-retro">Horas</span>
-                </div>
-                <div class="fx-column">
-                    <span id="countdown-minutes" class="counter-text"></span>
-                    <span class="font-retro">Minutos</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- our story -->
-    <section class="container">
-
-        <div class="inner-space story-section accent">
-            <div>
-                <img class="story-image" data-src="./img/story.png" alt="Imagen Vertical">
-            </div>
-
-            <div>
-                <div class="story-title">
-
-                    <div class="hidden">
-                        <span class="title-1">Nuestra</span>
-                        <br>
-                        <span class="title-2" style="margin-left: 1rem;">historia</span>
+                <div class="inner-space border-top border-bottom">
+                    <div class="fx-row fx-space-between">
+                        <div class="fx-column">
+                            <span id="countdown-days" class="counter-text"></span>
+                            <span class="font-retro">Día(s)</span>
+                        </div>
+                        <div class="fx-column">
+                            <span id="countdown-hours" class="counter-text"></span>
+                            <span class="font-retro">Hora(s)</span>
+                        </div>
+                        <div class="fx-column">
+                            <span id="countdown-minutes" class="counter-text"></span>
+                            <span class="font-retro">Minuto(s)</span>
+                        </div>
+                        <div class="fx-column">
+                            <span id="countdown-seconds" class="counter-text"></span>
+                            <span class="font-retro">Segundo(s)</span>
+                        </div>
                     </div>
-
-
                 </div>
-                <div class="story-text">
-
-                    <p>Todo comienza un 24 de julio del 2021, dónde comenzó una relación y
-                        el incio de muchos planes que Dios preparó para los dos. Una relación
-                        dónde la distancia era inevitable pero la voluntad de querernos y algún
-                        día estar juntos para siempre era aún más fuerte.</p>
-                    <p>Un jueves 26 de febrero del 2023, a la orilla de la bella playa de
-                        Cozumel, dimos el "Si" dónde sabíamos que a partir de ahí un nuevo
-                        camino con nuevos sueños y nuevos retos iban a llegar a nuestras vidas
-                        pero sabíamos que siempre estando el uno con el otro, tomados de las
-                        manos de Dios, nada podrá detenernos.</p>
-                    <p>Estamos muy ansiosos y emocionados que llegue el día deseado y por eso
-                        mísmo queremos que vivas este momento tan especial junto a nosotros
-                        donde celebraremos que la distancia ya no será un obstáculo más en
-                        nuestras vidas y en nuestro amor.</p>
-                </div>
-            </div>
+                <p>Cuenta regresiva</p>
+            </section>
         </div>
     </section>
 
-    <!-- Gallery -->
-    <!-- <section class="photo-grid ">        
-        <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-        <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-        <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-        <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
-    </section> -->
-
-    <section class="photo-carousel">
-        <div class="photo-wrapper">
-            <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-            <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-            <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-            <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
-            <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-            <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-            <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-            <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
-            <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-            <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-            <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-            <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
-            <div class="photo"><img src="./img/photo_grid_1.jpg" alt="Photo 1"></div>
-            <div class="photo"><img src="./img/photo_grid_2.jpg" alt="Photo 2"></div>
-            <div class="photo"><img src="./img/photo_grid_3.jpg" alt="Photo 3"></div>
-            <div class="photo"><img src="./img/photo_grid_4.jpg" alt="Photo 4"></div>
-        </div>
+    <section class="inner-space section-tone-2 accent fx-row">
+        <span class="title-1">Nuestra Boda</span>
     </section>
 
-    <!-- RSVP -->
-    <section class="rsvp-section">
-        <div class="inner-space section-tone-2 accent" style="margin-top: -4px;">
-            <div class="fx-column hidden">
-                <div>
-                    <span class="title-1">Nos vemos en</span>
-                    <br>
-                    <span class="title-2" style="margin-left: 96px;">Guadalajara</span>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="inner-space section-tone-1 rsvp-content">
-            <div class="rsvp-text">
-                <span class="rsvp-title">Terraza el Tejaban</span>
-                <span class="rsvp-address">Independencia #20. 45235 Zapopan, Jalisco, México</span>
-                <div class="rsvp-hour">
-                    <span>Hora: </span>
-                    <span id="weddingHour"></span>
-                </div>
-                <div class="rsvp-button">
-                    <a href="https://maps.app.goo.gl/MXtgRLuuPYEogQt9A" class="font-retro" target="_blank">Ver Mapa</a>
-                </div>
-            </div>
-            <div class="rsvp-image">
-                <img data-src="./img/place_photo.jpeg" alt="Foto del lugar">
-            </div>
-
-        </div>
-
+    <section class="inner-space section-tone-1 accent fx-row">
+        <a href="wa.me/526674945299?text=¡Hola! quiero confirmar mi asistencia a la boda de Keren & Ángel, asistiremos: "
+            class="pill">
+            <span>CONFIRMA TU ASISTENCIA</span>
+        </a>
     </section>
 
 
-    <!-- Gifts -->
-    <section class="container">
-
-        <div class="inner-space gift-section accent">
-
-            <div class="gift-options">
-                <a class="gift-option hidden"
-                    href="https://www.amazon.com.mx/wedding/abdiel-hernández-cesia-moreno-tijuana-baja-california-february-2024/registry/2X92RBMS6CH62"
-                    target="_blank">
-                    <h4 class="font-retro gift-option-title">Mesa de regalos</h4>
-                    <img data-src="./img/gift.jpg" alt="Imagen de Regalo">
-                    <span class="gift-option-name">Amazon Wishlist</span>
-                </a>
-
-                <span class="h-separator"></span>
-                <span class="v-separator"></span>
-
-                <div class="gift-option hidden">
-                    <h4 class="font-retro gift-option-title">LLuvia de Sobres</h4>
-                    <img data-src="./img/letter.jpg" alt="Imagen de Sobre">
-                    <span class="gift-option-name">
-                        BBVA
-                        <br>
-                        4152 3139 1448 2109
-                        <br>
-                        Abdiel Hernández
-                    </span>
-                </div>
+    <section class="inner-space section-tone-2 accent parents">
+        <span class="title-1">NUESTROS PADRES</span>
+        <span class="h-separator"></span>
+        <div class="hidden">
+            <div class="fx-column">
+                <p style="text-transform: uppercase;">Padres de la novia</p>
+                <ul>
+                    <li>Marina Eunice Cuevas de Moreno</li>
+                    <li>Alberto Moreno Flores</li>
+                </ul>
             </div>
 
-            <p>
-                Los regalos no son necesarios ni obligatorios, pero de igual manera <br class="br">
-                todo sera bien recibido; ya que sabemos que la mayoría de nuestros <br class="br">
-                invitados estan haciendo un gran esfuerzo haciendo el viaje.
-            </p>
-
+            <div class="fx-column">
+                <p style="text-transform: uppercase;">Padres de novio</p>
+                <ul>
+                    <li>María Teresa Díaz de Verdugo</li>
+                    <li>Antonio F. Verdugo Rábago</li>
+                </ul>
+            </div>
 
         </div>
     </section>
 
-    <!-- Confirmation -->
-    
+    <section class="inner-space section-tone-3 white parents">
+        <div class="hidden">
+            <span class="title-1">NUESTROS PADRINOS</span>
+            <span class="h-separator"></span>
+            <div>
+                <ul>
+                    <li>Marcelo Díaz Acosta</li>
+                    <li>Graciela Sayas de Acosta</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section>
-        <div class="confirmation-section parallax">
-            <div class="container">
-                <div class="overlay fx-column  ">
+        <div class="phrase ">
 
-                    <div>
-                        <span class="title-1 accent">Confirma tu</span>
-                        <br>
-                        <span class="title-2 accent" style="margin-left: 135px;">Asistencia</span>
-                    </div>
-
-                    <p class="title-1 accent">Lo más importante para <br class="br">nosotros, es tu compañia</p>
-
-                    <p class="accent">Da click en el botón inferior para confirmar tu asistencia</p>
-
-                    <a class="pill"
-                        href="https://api.whatsapp.com/send?phone=6672749006&text=¡Hola! Quiero confirmar mi asistencia para tu boda. Nombre(s):"
-                        target="_blank">Confirmación</a>
-
-                </div>
+            <div class="overlay fx-column fx-start white text-shadow effect-1">
+                <p class="hidden">Ponme como sello sobre tu corazón, como un sello en tu brazo. Pues el amor es tan
+                    fuerte como la
+                    muerte.
+                    <br>
+                    <br>
+                    Cantares 8:6
+                </p>
             </div>
         </div>
     </section>
 
 
+    <div class="inner-space section-tone-2 accent rsvp-content">
+
+        <h2 class="title-1">ITINERARIO</h2>
+
+        <div class="rsvp-text">
+
+            <div class="rsvp-image">
+                <img id="ceremonyImage" alt="Foto del lugar">
+            </div>
+            <span id="ceremonyTitle" class="rsvp-title"></span>
+            <span id="ceremonyAddress" class="rsvp-address"></span>
+
+            <div class="rsvp-button">
+                <a id="ceremonyMapLink" class="pill font-retro" target="_blank">VER MAPA</a>
+            </div>
+            <div class="rsvp-hour">
+                <span id="ceremonyHour"></span>
+            </div>
+        </div>
+        <span class="h-separator"></span>
+        <div class="rsvp-text">
+
+            <div class="rsvp-image">
+                <img id="rsvpImage" alt="Foto del lugar">
+            </div>
+            <span id="rsvpTitle" class="rsvp-title"></span>
+            <span id="rsvpAddress" class="rsvp-address"></span>
+
+            <div class="rsvp-button">
+                <a id="rsvpMapLink" class="pill font-retro" target="_blank">VER MAPA</a>
+            </div>
+            <div class="rsvp-hour">
+                <span id="cocktailHour"></span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="place-photos">
+        <img src="img/place_photo.jpeg" alt="cielito mio terraza">
+        <img src="img/place_photo_2.jpeg" alt="cielito mio fachada">
+    </div>
+
+    <section class="inner-space section-tone-3 fx-column">
+        <span class="title-1">CÓDIGO DE VESTIMENTA</span>
+        <p style="text-transform: uppercase; margin: 0;">Elegante</p>
+    </section>
+
+    <div class="banner-1">
+
+    </div>
+
+    <section class="inner-space gift-section section-tone-1">
+
+        <div class="gift-options">
+
+            <div class="gift-option hidden">
+                <h4 class="font-retro gift-option-title">LLuvia de Sobres</h4>
+                <span class="h-separator white"></span>
+                <img data-src="./img/sobres.png" alt="Imagen de Sobre">
+                <span class="gift-option-name">
+                    Bancoppel
+                    <br>
+                    4169 1614 1920 8235
+                    <br>
+                    Keren Moreno Cuevas
+                </span>
+            </div>
+        </div>
+
+        <p>
+            Tu presencia es nuestro mayor regalo,<br class="br">
+            pero si deseas tener un detalle con nosotros <br class="br">
+            puedes hacerlo a través de nuestra cuenta.
+        </p>
+
+
+    </section>
+
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/photo_banner_2.jpg" alt="">
+        </div>
+    </div>
+
+    <section class="inner-space section-tone-3 fx-column">
+        <span class="title-1">NO NIÑOS</span>
+        <p style="text-align: center; margin: 0;">Amamos a sus pequeños, hagan de este día una cita y pasémosla
+            increíble.</p>
+    </section>
 
     <!-- Hotels -->
-    <section class="hotels-section fx-column hidden">
+    <section class="inner-space hotels-section section-tone-2 fx-column hidden">
 
-        <div>
-            <span class="title-1 accent">Sugerencias de</span>
-            <br>
-            <span class="title-2 accent" style="margin-left: 110px;">Hospedaje</span>
+        <span class="title-1 accent">HOSPEDAJE</span>
+        <span class="h-separator"></span>
+
+        <img class="icon" src="img/Hotel.png" alt="icono hotel">
+
+        <div class="hotel-items accent">
+            <div>
+                <p class="title-2">Hotel Homesuites Malecón <br><span
+                        style="color: var(--primary-color);">Culiacán</span></p>
+
+                <a class="pill pill-small " href="https://maps.app.goo.gl/hmUAXo9dBwhcJqry9" target="_blank">Ver
+                    mapa</a>
+            </div>
+            <span class="h-separator"></span>
+
+            <div>
+                <p class="title-2">Hotel One Culiacán Forum <br><span
+                        style="color: var(--primary-color);">Culiacán</span></p>
+
+                <a class="pill pill-small " href="https://maps.app.goo.gl/bJDbZ7eKKv8dGpgd7" target="_blank">Ver
+                    mapa</a>
+            </div>
+            <span class="h-separator"></span>
+
         </div>
 
-        <ul class="hotel-items">
-            <li>
-                <p>City Express Plus by Marriot <br>Guadalajara Palomar</p>
-                <a class="pill pill-small " href="https://maps.app.goo.gl/CATogBm2qXoJynQ46" target="_blank">Ver
-                    mapa</a>
-            </li>
-            <li>
-                <p>Microtel Inn & Suits by <br>Wyndham Guadalajara Sur</p>
-                <a class="pill pill-small " href="https://maps.app.goo.gl/UjNMhFTZEELiPrJ59" target="_blank">Ver
-                    mapa</a>
-            </li>
-            <li>
-                <p>Hotel Marquiz</p>
-                <a class="pill pill-small " href="https://maps.app.goo.gl/MMKZqws3uz5RB5eQ6" target="_blank">Ver
-                    mapa</a>
-            </li>
-            <li>
-                <p>Ramada Encore Guadalajra Sur</p>
-                <a class="pill pill-small " href="https://maps.app.goo.gl/v4FWWHQpMEMhumqv8" target="_blank">Ver
-                    mapa</a>
-            </li>
-        </ul>
-
-
     </section>
+
+    <section class="inner-space section-tone-3 fx-column">
+        <span class="title-1 center">Nuestros Momentos</span>
+    </section>
+
+
+    <!-- Gallery -->
+    <section class="photo-grid">
+        <div class="photo hidden" onclick="showImage('./img/photo_grid_1.jpg')"><img src="./img/photo_grid_1.jpg"
+                alt="Photo 1"></div>
+        <div class="photo hidden" onclick="showImage('./img/photo_grid_2.jpg')"><img src="./img/photo_grid_2.jpg"
+                alt="Photo 2"></div>
+        <div class="photo hidden" onclick="showImage('./img/photo_grid_3.jpg')"><img src="./img/photo_grid_3.jpg"
+                alt="Photo 3"></div>
+        <div class="photo hidden" onclick="showImage('./img/photo_grid_4.jpg')"><img src="./img/photo_grid_4.jpg"
+                alt="Photo 4"></div>
+        <div class="photo hidden" onclick="showImage('./img/photo_grid_5.jpg')"><img src="./img/photo_grid_5.jpg"
+                alt="Photo 5"></div>
+        <div class="photo hidden" onclick="showImage('./img/photo_grid_6.jpg')"><img src="./img/photo_grid_6.jpg"
+                alt="Photo 6"></div>
+        <div class="photo hidden" onclick="showImage('./img/photo_grid_7.jpg')"><img src="./img/photo_grid_7.jpg"
+                alt="Photo 7"></div>
+        <div class="photo hidden" onclick="showImage('./img/photo_grid_8.jpg')"><img src="./img/photo_grid_8.jpg"
+                alt="Photo 8"></div>
+        <div class="photo hidden" onclick="showImage('./img/photo_grid_9.jpg')"><img src="./img/photo_grid_9.jpg"
+                alt="Photo 9"></div>
+    </section>
+
+
+    <div id="overlay" onclick="hideImage()">
+        <img id="fullImage" src="" alt="Full-size Image">
+    </div>
+
 
     <!-- Footer -->
     <footer>
         <div class="inner-space section-tone-2 accent">
             <div>
-                <span>Utiliza el hashtag #BodaChesia</span>
+                <a href="wa.me/526674945299?text=¡Hola! quiero confirmar mi asistencia a la boda de Keren & Ángel, asistiremos: "
+                    class="pill">
+                    <span>CONFIRMA TU ASISTENCIA</span>
+                </a>
             </div>
 
         </div>
@@ -273,18 +297,20 @@
     </footer>
 
     <script src="index.js"></script> <!-- Link to your custom JS script -->
-    <script>
-        const eventInfo = {
-            date: '2024-02-24T22:00:00Z'
-        };
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <script>
 
         document.addEventListener('DOMContentLoaded', function () {
-            setWeedingDate(eventInfo.date);
-            initCountdown(eventInfo.date);
-            loadImages();
-            initScollElements();
-            initCarousel();            
+            onInit();
+            try {
+                var elems = document.querySelectorAll('.parallax');
+                var instances = M.Parallax.init(elems, { responsiveThreshold: 0 });
+
+            } catch (error) {
+
+            }
         });
     </script>
 </body>
