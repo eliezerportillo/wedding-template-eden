@@ -35,6 +35,35 @@
     }
 }
 
+/* Extra small devices (phones) */
+@media only screen and (max-width: 600px) {
+    .hidden-xs {
+      display: none !important;
+    }
+  }
+  
+  /* Small devices (tablets) */
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+    .hidden-sm {
+      display: none !important;
+    }
+  }
+  
+  /* Medium devices (desktops) */
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+    .hidden-md {
+      display: none !important;
+    }
+  }
+  
+  /* Large devices (large desktops) */
+  @media only screen and (min-width: 993px) {
+    .hidden-lg {
+      display: none !important;
+    }
+  }
+  
+
 .effect-1 {
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -73,10 +102,19 @@ body {
 .banner-1 {
     position: relative;
     background-image: url('../img/photo_banner.jpg');
-    background-size: 130%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: top center;
-    height: calc(100vh - (78px + 75px));
+    height: 500px;
+}
+
+.banner-2 {
+    position: relative;
+    background-image: url('../img/photo_banner_2.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 200px;
 }
 
 .place-photos {
@@ -376,9 +414,13 @@ h5 {
     gap: 1rem;
 }
 
-.rsvp-content .title-1 {
-    font-size: 2.58rem;
-
+.rsvp-section {
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;
+    text-align: center;
 }
 
 .rsvp-title {
@@ -394,6 +436,7 @@ h5 {
     max-width: 100%;
     text-align: center;
     gap: 1rem;
+    min-width: 216px;
 }
 
 .rsvp-address {
@@ -481,6 +524,7 @@ h5 {
 
 }
 
+.h-greca,
 .h-separator {
     min-width: 100px;
     width: 40%;
@@ -489,6 +533,7 @@ h5 {
     border-left: none;
 }
 
+.h-greca.white,
 .h-separator.white {
     border-color: white;
 }
@@ -497,7 +542,7 @@ h5 {
     color: white;
 }
 
-.gift-section .v-separator {
+.v-separator {
     height: 18.75rem;
     border: 0.0625rem solid var(--accent-color);
 }
@@ -657,53 +702,56 @@ footer {
         background-size: cover;
         background-size: 116%;
         background-position-y: -12.5rem;
-        height: 25.625rem;
     }
 
-    .names {
-        font-size: 2.1rem;
-        display: inline-block;
-        line-height: 2.1875rem;
-    }
-
-    .ml-10 {
-        margin-left: 2.875rem;
-    }
-
-    .story-section {
-
+    .parents-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
         place-content: center space-evenly;
         align-items: center;
+        gap: 1rem;
     }
+
+    .great-phrase {
+        font-size: 2rem;
+    }
+
+    .place-photos {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: flex-start center;
+        align-items: flex-start;
+    }
+
+    .place-photos img {
+        width: 50%;
+    }
+
+    .names {
+        font-size: 3.1rem;
+        display: inline-block;
+        line-height: 2.1875rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
+    }
+
+
+
+
 
     .rsvp-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
-        place-content: flex-start space-evenly;
-        align-items: center;
+        place-content: flex-start space-around;
+        align-items: flex-start;
     }
 
-    .gift-section .gift-options {
-        height: 100%;
-        flex-direction: row;
-        box-sizing: border-box;
-        display: flex;
-        place-content: center space-evenly;
-        align-items: stretch;
-    }
 
-    .confirmation-section {
-        height: 25.625rem;
-
-        background-size: 120%;
-
-        background-position-x: left;
-        background-position-y: bottom;
-    }
 
     .hotels-section .hotel-items {
 
@@ -728,55 +776,58 @@ footer {
     /* CSS for tablets */
     .header-section {
         background-size: cover;
-        background-size: 120%;
-        background-position-y: -20.75rem;
-        height: 31.875rem;
+        background-size: 116%;
+        background-position-y: -30rem;
     }
 
-    .names {
-        font-size: 3.5rem;
-        display: inline-block;
-        line-height: 3.5rem;
-    }
-
-    .ml-10 {
-        margin-left: 5rem;
-    }
-
-    .story-section {
-
+    .parents-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
         place-content: center space-evenly;
         align-items: center;
+        gap: 1rem;
+    }
+    .banner-1, .banner-2 {
+        background-position-y: -40rem;
+    }
+
+    .phrase {
+        background-position-y: -30rem;
+    }
+
+    .great-phrase {
+        font-size: 2rem;
+    }
+
+    .place-photos {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: flex-start center;
+        align-items: flex-start;
+    }
+
+    .place-photos img {
+        width: 50%;
+    }
+
+    .names {
+        font-size: 3.1rem;
+        display: inline-block;
+        line-height: 2.1875rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
     }
 
     .rsvp-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
-        place-content: center;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .gift-section .gift-options {
-        height: 100%;
-        flex-direction: row;
-        box-sizing: border-box;
-        display: flex;
-        place-content: center space-evenly;
-        align-items: stretch;
-    }
-
-    .confirmation-section {
-        height: 25.625rem;
-
-        background-size: 120%;
-
-        background-position-x: left;
-        background-position-y: bottom;
+        place-content: flex-start space-around;
+        align-items: flex-start;
     }
 
     .hotels-section .hotel-items {
@@ -801,55 +852,58 @@ footer {
 
     .header-section {
         background-size: cover;
-        background-size: 100%;
-        background-position-y: -25rem;
-        height: 31.875rem;
+        background-size: 116%;
+        background-position-y: -30rem;
     }
 
-    .names {
-        font-size: 3.5rem;
-        display: inline-block;
-        line-height: 3.5rem;
-    }
-
-    .ml-10 {
-        margin-left: 5rem;
-    }
-
-    .story-section {
-
+    .parents-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
-        place-content: center center;
+        place-content: center space-evenly;
         align-items: center;
+        gap: 1rem;
+    }
+    .banner-1, .banner-2 {
+        background-position-y: -40rem;
+    }
+
+    .phrase {
+        background-position-y: -50rem;
+    }
+
+    .great-phrase {
+        font-size: 2rem;
+    }
+
+    .place-photos {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: flex-start center;
+        align-items: flex-start;
+    }
+
+    .place-photos img {
+        width: 50%;
+    }
+
+    .names {
+        font-size: 3.1rem;
+        display: inline-block;
+        line-height: 2.1875rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
     }
 
     .rsvp-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
-        place-content: center;
-        align-items: center;
-        gap: 2rem
-    }
-
-    .gift-section .gift-options {
-        height: 100%;
-        flex-direction: row;
-        box-sizing: border-box;
-        display: flex;
-        place-content: center space-evenly;
-        align-items: stretch;
-    }
-
-    .confirmation-section {
-        height: 25.625rem;
-
-        background-size: 120%;
-
-        background-position-x: left;
-        background-position-y: -71.875rem;
+        place-content: flex-start space-around;
+        align-items: flex-start;
     }
 
     .hotels-section .hotel-items {
@@ -875,57 +929,59 @@ footer {
     /* CSS for large PCs/desktops */
     .header-section {
         background-size: cover;
-        background-size: 100%;
-        background-position-y: -27rem;
-        height: 44.375rem;
+        background-size: 116%;
+        background-position-y: -30rem;
     }
 
-    .names {
-        font-size: 3.5rem;
-        display: inline-block;
-        line-height: 3.5rem;
-    }
-
-    .ml-10 {
-        margin-left: 5rem;
-    }
-
-    .story-section {
-
+    .parents-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
-        place-content: center center;
+        place-content: center space-evenly;
         align-items: center;
+        gap: 1rem;
+    }
+    .banner-1, .banner-2 {
+        background-position-y: -40rem;
 
-        padding: 5rem 0;
+    }
+
+    .phrase {
+        background-position-y: -30rem;
+    }
+
+    .great-phrase {
+        font-size: 2rem;
+    }
+
+    .place-photos {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: flex-start center;
+        align-items: flex-start;
+    }
+
+    .place-photos img {
+        width: 50%;
+    }
+
+    .names {
+        font-size: 3.1rem;
+        display: inline-block;
+        line-height: 2.1875rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
     }
 
     .rsvp-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
-        place-content: center;
-        align-items: center;
-        gap: 2rem
-    }
-
-    .gift-section .gift-options {
-        height: 100%;
-        flex-direction: row;
-        box-sizing: border-box;
-        display: flex;
-        place-content: center space-evenly;
-        align-items: stretch;
-    }
-
-    .confirmation-section {
-        height: 25.625rem;
-
-        background-size: 115%;
-
-        background-position-x: left;
-        background-position-y: -97.0625rem;
+        place-content: flex-start space-around;
+        align-items: flex-start;
     }
 
     .hotels-section .hotel-items {
@@ -950,57 +1006,59 @@ footer {
     /* CSS for large PCs/desktops */
     .header-section {
         background-size: cover;
-        background-size: 100%;
-        background-position-y: -51rem;
-        height: 44.375rem;
+        background-size: 116%;
+        background-position-y: -30rem;
     }
 
-    .names {
-        font-size: 3.5rem;
-        display: inline-block;
-        line-height: 3.5rem;
-    }
-
-    .ml-10 {
-        margin-left: 5rem;
-    }
-
-    .story-section {
-
+    .parents-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
-        place-content: center center;
+        place-content: center space-evenly;
         align-items: center;
+        gap: 1rem;
+    }
+    .banner-1, .banner-2 {
+        background-position-y: -40rem;
 
-        padding: 5rem 0;
+    }
+
+    .phrase {
+        background-position-y: -30rem;
+    }
+
+    .great-phrase {
+        font-size: 2rem;
+    }
+
+    .place-photos {
+        flex-direction: row;
+        box-sizing: border-box;
+        display: flex;
+        place-content: flex-start center;
+        align-items: flex-start;
+    }
+
+    .place-photos img {
+        width: 50%;
+    }
+
+    .names {
+        font-size: 3.1rem;
+        display: inline-block;
+        line-height: 2.1875rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
     }
 
     .rsvp-content {
         flex-direction: row;
         box-sizing: border-box;
         display: flex;
-        place-content: center;
-        align-items: center;
-        gap: 2rem
-    }
-
-    .gift-section .gift-options {
-        height: 100%;
-        flex-direction: row;
-        box-sizing: border-box;
-        display: flex;
-        place-content: center space-evenly;
-        align-items: stretch;
-    }
-
-    .confirmation-section {
-        height: 25.625rem;
-
-        background-size: 100%;
-
-        background-position-x: left;
-        background-position-y: -130rem;
+        place-content: flex-start space-around;
+        align-items: flex-start;
     }
 
     .hotels-section .hotel-items {

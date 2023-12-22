@@ -4,7 +4,7 @@ const settings = {
         dateTime: '2024-01-27T22:00:00Z',
         ceremony: {
             name: 'CEREMONIA',
-            address: 'Primera IAFJ',
+            address: 'Primera IAFCJ',
             image: './img/church.png',
             hour: '3:00 PM',
             url: "https://maps.app.goo.gl/mXkvo94tB7pT32f8A"
