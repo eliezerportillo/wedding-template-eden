@@ -1,9 +1,9 @@
 const settings = {
     eventInfo: {
-        dateTime: '2024-02-24T22:00:00Z',
+        dateTime: '2024-02-24T23:00:00Z',
 
         rsvp: {
-            dateTime: '2023-12-16T16:00:00',
+            dateTime: '2023-12-16T17:00:00',
             name: 'Terraza el Tejaban',
             address: 'Independencia #20. 45235 Zapopan, Jalisco, México',
             addressLink: 'https://maps.app.goo.gl/zfXjQA344JyibCbs5',
