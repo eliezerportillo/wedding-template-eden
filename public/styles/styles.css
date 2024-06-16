@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #b99b80;
-    --secondary-color: #ffeedf;
-    --accent-color: #8f6450;
+    --primary-color: #70202a;
+    --secondary-color: #e4c6c3;
+    --accent-color: #70202a;
 }
 
 .my-section {
@@ -63,11 +63,12 @@ body {
 .header-section {
     position: relative;
     background-image: url('../img/header.jpg');
-    background-size: 112%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: top center;
-    background-position-y: -6.25rem;
+    background-position-y: -0.5rem;
     height: 12.5rem;
+    background-color: var(--primary-color);
 
 
 }
@@ -81,9 +82,6 @@ body {
     height: 100%;
     text-align: center;
     color: #fff;
-
-
-
 }
 
 .fx-row {
@@ -240,7 +238,8 @@ h5 {
 
 
 .photo-carousel {
-    overflow-x: auto;
+    overflow-x: hidden;
+    background-color: var(--accent-color);
     white-space: nowrap;
 }
 
@@ -261,10 +260,14 @@ h5 {
 }
 
 
-
+.quote-section {
+    margin-top: -4px
+}
 
 
 .names {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    margin: 0 1rem;
     font-size: 1.375rem;
     display: inline-block;
     line-height: 1.375rem;
@@ -279,14 +282,35 @@ h5 {
     margin-bottom: 2.5rem;
 }
 
+.rsvp-section {
+    padding: 2rem 0;
+}
+
 .rsvp-content {
 
     font-family: 'SacredValley', sans-serif;
     padding: 1rem 2rem;
+
+}
+
+.rsvp-content-header {
+    font-family: 'RetroSignature';
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-align: center;
+    
+}
+
+
+
+.rsvp-header {
+    font-family: 'RetroSignature';
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .rsvp-title {
-    font-size: 2.58rem;
+    font-size: 3rem;
 }
 
 .rsvp-text {
@@ -296,7 +320,7 @@ h5 {
     place-content: stretch flex-start;
     align-items: stretch;
     max-width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 .rsvp-address {
@@ -330,7 +354,9 @@ h5 {
 }
 
 
-
+.dress-code-section img {
+    margin-bottom: 1rem;
+}
 
 .gift-section {
     height: 100%;
@@ -413,11 +439,17 @@ h5 {
 .confirmation-section {
     position: relative;
     background-image: url('../img/confirmation.jpg');
-    background-size: 185%;
+    background-size: 131%;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: bottom;
+    background-position-y: center;
     height: 25rem;
+}
+
+.confirmation-section .confirmation-button {
+
+    position: absolute;
+    bottom: -1.5rem;
 }
 
 .confirmation-section .overlay {
@@ -512,6 +544,10 @@ footer {
 /* Extra small devices (phones, portrait) */
 @media only screen and (max-width: 767px) {
 
+    .rsvp-ceremony-content {
+        margin-bottom: 2rem;
+    }
+
     /* CSS for phones in portrait mode */
     .h-separator {
         display: block;
@@ -535,12 +571,13 @@ footer {
     /* CSS for phones in landscape mode */
     .header-section {
         background-size: cover;
-        background-size: 116%;
-        background-position-y: -12.5rem;
+        background-size: 100%;
+        /* background-position-y: -12.5rem; */
         height: 25.625rem;
     }
 
     .names {
+        margin: 0 3rem;
         font-size: 2.1rem;
         display: inline-block;
         line-height: 2.1875rem;
@@ -560,12 +597,25 @@ footer {
     }
 
     .rsvp-content {
-        flex-direction: row;
+        flex-direction: column;
         box-sizing: border-box;
         display: flex;
         place-content: flex-start space-evenly;
         align-items: center;
     }
+
+    .rsvp-ceremony-content, .rsvp-reception-content {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .rsvp-reception-content {
+        margin-top: 2rem;
+    }
+
+
+
 
     .gift-section .gift-options {
         height: 100%;
@@ -578,11 +628,9 @@ footer {
 
     .confirmation-section {
         height: 25.625rem;
-
         background-size: 120%;
-
-        background-position-x: left;
-        background-position-y: bottom;
+        background-position-x: center;
+        background-position-y: center;
     }
 
     .hotels-section .hotel-items {
@@ -608,12 +656,13 @@ footer {
     /* CSS for tablets */
     .header-section {
         background-size: cover;
-        background-size: 120%;
-        background-position-y: -20.75rem;
+        background-size: 100%;
+        /* background-position-y: -20.75rem; */
         height: 31.875rem;
     }
 
     .names {
+        margin: 0 3rem;
         font-size: 3.5rem;
         display: inline-block;
         line-height: 3.5rem;
@@ -633,12 +682,22 @@ footer {
     }
 
     .rsvp-content {
-        flex-direction: row;
+        flex-direction: column;
         box-sizing: border-box;
         display: flex;
         place-content: center;
         align-items: center;
         gap: 2rem;
+    }
+
+    .rsvp-ceremony-content, .rsvp-reception-content {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .rsvp-reception-content {
+        margin-top: 2rem;
     }
 
     .gift-section .gift-options {
@@ -652,11 +711,9 @@ footer {
 
     .confirmation-section {
         height: 25.625rem;
-
         background-size: 120%;
-
-        background-position-x: left;
-        background-position-y: bottom;
+        background-position-x: center;
+        background-position-y: -39rem;
     }
 
     .hotels-section .hotel-items {
@@ -682,11 +739,12 @@ footer {
     .header-section {
         background-size: cover;
         background-size: 100%;
-        background-position-y: -25rem;
-        height: 31.875rem;
+        /* background-position-y: -25rem; */
+        height: 42.875rem;
     }
 
     .names {
+        margin: 0 3rem;
         font-size: 3.5rem;
         display: inline-block;
         line-height: 3.5rem;
@@ -706,12 +764,22 @@ footer {
     }
 
     .rsvp-content {
-        flex-direction: row;
+        flex-direction: column;
         box-sizing: border-box;
         display: flex;
         place-content: center;
         align-items: center;
         gap: 2rem
+    }
+
+    .rsvp-ceremony-content, .rsvp-reception-content {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .rsvp-reception-content {
+        margin-top: 2rem;
     }
 
     .gift-section .gift-options {
@@ -782,12 +850,22 @@ footer {
     }
 
     .rsvp-content {
-        flex-direction: row;
+        flex-direction: column;
         box-sizing: border-box;
         display: flex;
         place-content: center;
         align-items: center;
         gap: 2rem
+    }
+
+    .rsvp-ceremony-content, .rsvp-reception-content {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .rsvp-reception-content {
+        margin-top: 2rem;
     }
 
     .gift-section .gift-options {
@@ -863,6 +941,15 @@ footer {
         place-content: center;
         align-items: center;
         gap: 2rem
+    }
+    .rsvp-ceremony-content, .rsvp-reception-content {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .rsvp-reception-content {
+        margin-top: 2rem;
     }
 
     .gift-section .gift-options {

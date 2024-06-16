@@ -1,21 +1,30 @@
 const settings = {
     eventInfo: {
-        dateTime: '2024-02-24T23:00:00Z',
+        dateTime: '2024-07-07T21:00:00Z',
 
         rsvp: {
-            dateTime: '2023-12-16T17:00:00',
-            name: 'Terraza el Tejaban',
-            address: 'Independencia #20. 45235 Zapopan, Jalisco, México',
-            addressLink: 'https://maps.app.goo.gl/zfXjQA344JyibCbs5',
-            image: './img/place_photo.jpeg'
+            ceremony: {
+                dateTime: '2024-07-07T14:00:00',
+                name: '8va. IAFCJ',
+                address: 'C. Hierro 599, Guadalajara, 22110 Tijuana, B.C.',
+                addressLink: 'https://maps.app.goo.gl/wgduuySj1rwZyvyGA',
+                image: './img/ceremony_photo.png'
+            },
+            reception: {
+                dateTime: '2023-07-07T16:00:00',
+                name: 'Jardín Sol y Luna',
+                address: 'Vicente Guerrero 16, Machado Sur, 22703 Playas de Rosarito, B.C.',
+                addressLink: 'https://maps.app.goo.gl/5L2gwQ6qW6W5Ekow5',
+                image: './img/reception_photo.png'
+            }
         },
 
     },
     bride: {
-        name: 'Cesia'
+        name: 'Merari'
     },
     groom: {
-        name: 'Abdiel'
+        name: 'Misael'
     },
 
     sections: [
@@ -23,11 +32,13 @@ const settings = {
         'my-countdown-section',
         'my-story-section',
         'my-carousel-section',
+        'my-quote-section',
         'my-rsvp-section',
         'my-ceremony-section',
+        'my-dress-code-section',
         'my-gifts-section',
         'my-congirmation-section',
-        'my-hotels-section',
+        // 'my-hashtag-section',
         'my-footer-section'
     ]
 }
@@ -88,7 +99,8 @@ function setRsvpInfo(settings) {
         setWeedingHour(placeInfo.dateTime, `${selector}Hour`);
     }
 
-    setInfo(settings.eventInfo.rsvp, 'rsvp');
+    setInfo(settings.eventInfo.rsvp.ceremony, 'ceremony');
+    setInfo(settings.eventInfo.rsvp.reception, 'reception');
 }
 
 function initCountdown(date) {
