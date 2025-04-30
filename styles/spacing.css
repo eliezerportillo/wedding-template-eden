@@ -1,0 +1,719 @@
+/* Utility classes for gap spacing */
+
+/* Small gaps */
+.gap-1 {
+    gap: 0.25rem;
+    /* 4px */
+}
+
+.gap-2 {
+    gap: 0.5rem;
+    /* 8px */
+}
+
+.gap-3 {
+    gap: 0.75rem;
+    /* 12px */
+}
+
+.gap-4 {
+    gap: 1rem;
+    /* 16px */
+}
+
+/* Medium gaps */
+.gap-5 {
+    gap: 1.25rem;
+    /* 20px */
+}
+
+.gap-6 {
+    gap: 1.5rem;
+    /* 24px */
+}
+
+.gap-7 {
+    gap: 1.75rem;
+    /* 28px */
+}
+
+.gap-8 {
+    gap: 2rem;
+    /* 32px */
+}
+
+/* Large gaps */
+.gap-9 {
+    gap: 2.5rem;
+    /* 40px */
+}
+
+.gap-10 {
+    gap: 3rem;
+    /* 48px */
+}
+
+.gap-12 {
+    gap: 4rem;
+    /* 64px */
+}
+
+.gap-16 {
+    gap: 6rem;
+    /* 96px */
+}
+
+.gap-20 {
+    gap: 8rem;
+    /* 128px */
+}
+
+.gap-24 {
+    gap: 12rem;
+    /* 192px */
+}
+
+.gap-32 {
+    gap: 16rem;
+    /* 256px */
+}
+
+/* Utility classes for margin spacing */
+
+/* Small margins */
+.m-1 {
+    margin: 0.25rem;
+    /* 4px */
+}
+
+.m-2 {
+    margin: 0.5rem;
+    /* 8px */
+}
+
+.m-3 {
+    margin: 0.75rem;
+    /* 12px */
+}
+
+.m-4 {
+    margin: 1rem;
+    /* 16px */
+}
+
+/* Medium margins */
+.m-5 {
+    margin: 1.25rem;
+    /* 20px */
+}
+
+.m-6 {
+    margin: 1.5rem;
+    /* 24px */
+}
+
+.m-7 {
+    margin: 1.75rem;
+    /* 28px */
+}
+
+.m-8 {
+    margin: 2rem;
+    /* 32px */
+}
+
+/* Large margins */
+.m-9 {
+    margin: 2.5rem;
+    /* 40px */
+}
+
+.m-10 {
+    margin: 3rem;
+    /* 48px */
+}
+
+.m-12 {
+    margin: 4rem;
+    /* 64px */
+}
+
+.m-16 {
+    margin: 6rem;
+    /* 96px */
+}
+
+.m-20 {
+    margin: 8rem;
+    /* 128px */
+}
+
+.m-24 {
+    margin: 12rem;
+    /* 192px */
+}
+
+.m-32 {
+    margin: 16rem;
+    /* 256px */
+}
+
+/* Utility classes for margin-top spacing */
+
+/* Small margin-tops */
+.mt-1 {
+    margin-top: 0.25rem;
+    /* 4px */
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+    /* 8px */
+}
+
+.mt-3 {
+    margin-top: 0.75rem;
+    /* 12px */
+}
+
+.mt-4 {
+    margin-top: 1rem;
+    /* 16px */
+}
+
+/* Medium margin-tops */
+.mt-5 {
+    margin-top: 1.25rem;
+    /* 20px */
+}
+
+.mt-6 {
+    margin-top: 1.5rem;
+    /* 24px */
+}
+
+.mt-7 {
+    margin-top: 1.75rem;
+    /* 28px */
+}
+
+.mt-8 {
+    margin-top: 2rem;
+    /* 32px */
+}
+
+/* Large margin-tops */
+.mt-9 {
+    margin-top: 2.5rem;
+    /* 40px */
+}
+
+.mt-10 {
+    margin-top: 3rem;
+    /* 48px */
+}
+
+.mt-12 {
+    margin-top: 4rem;
+    /* 64px */
+}
+
+.mt-16 {
+    margin-top: 6rem;
+    /* 96px */
+}
+
+.mt-20 {
+    margin-top: 8rem;
+    /* 128px */
+}
+
+.mt-24 {
+    margin-top: 12rem;
+    /* 192px */
+}
+
+.mt-32 {
+    margin-top: 16rem;
+    /* 256px */
+}
+
+/* Utility classes for margin-bottom spacing */
+
+/* Small margin-bottoms */
+.mb-1 {
+    margin-bottom: 0.25rem;
+    /* 4px */
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+    /* 8px */
+}
+
+.mb-3 {
+    margin-bottom: 0.75rem;
+    /* 12px */
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+    /* 16px */
+}
+
+/* Medium margin-bottoms */
+.mb-5 {
+    margin-bottom: 1.25rem;
+    /* 20px */
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+.mb-7 {
+    margin-bottom: 1.75rem;
+    /* 28px */
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+    /* 32px */
+}
+
+/* Large margin-bottoms */
+.mb-9 {
+    margin-bottom: 2.5rem;
+    /* 40px */
+}
+
+.mb-10 {
+    margin-bottom: 3rem;
+    /* 48px */
+}
+
+.mb-12 {
+    margin-bottom: 4rem;
+    /* 64px */
+}
+
+.mb-16 {
+    margin-bottom: 6rem;
+    /* 96px */
+}
+
+.mb-20 {
+    margin-bottom: 8rem;
+    /* 128px */
+}
+
+.mb-24 {
+    margin-bottom: 12rem;
+    /* 192px */
+}
+
+.mb-32 {
+    margin-bottom: 16rem;
+    /* 256px */
+}
+
+/* Utility classes for margin-right spacing */
+
+/* Small margin-rights */
+.mr-1 {
+    margin-right: 0.25rem;
+    /* 4px */
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+    /* 8px */
+}
+
+.mr-3 {
+    margin-right: 0.75rem;
+    /* 12px */
+}
+
+.mr-4 {
+    margin-right: 1rem;
+    /* 16px */
+}
+
+/* Medium margin-rights */
+.mr-5 {
+    margin-right: 1.25rem;
+    /* 20px */
+}
+
+.mr-6 {
+    margin-right: 1.5rem;
+    /* 24px */
+}
+
+.mr-7 {
+    margin-right: 1.75rem;
+    /* 28px */
+}
+
+.mr-8 {
+    margin-right: 2rem;
+    /* 32px */
+}
+
+/* Large margin-rights */
+.mr-9 {
+    margin-right: 2.5rem;
+    /* 40px */
+}
+
+.mr-10 {
+    margin-right: 3rem;
+    /* 48px */
+}
+
+.mr-12 {
+    margin-right: 4rem;
+    /* 64px */
+}
+
+.mr-16 {
+    margin-right: 6rem;
+    /* 96px */
+}
+
+.mr-20 {
+    margin-right: 8rem;
+    /* 128px */
+}
+
+.mr-24 {
+    margin-right: 12rem;
+    /* 192px */
+}
+
+.mr-32 {
+    margin-right: 16rem;
+    /* 256px */
+}
+
+/* Utility classes for margin-left spacing */
+
+/* Small margin-lefts */
+.ml-1 {
+    margin-left: 0.25rem;
+    /* 4px */
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+    /* 8px */
+}
+
+.ml-3 {
+    margin-left: 0.75rem;
+    /* 12px */
+}
+
+.ml-4 {
+    margin-left: 1rem;
+    /* 16px */
+}
+
+/* Medium margin-lefts */
+.ml-5 {
+    margin-left: 1.25rem;
+    /* 20px */
+}
+
+.ml-6 {
+    margin-left: 1.5rem;
+    /* 24px */
+}
+
+.ml-7 {
+    margin-left: 1.75rem;
+    /* 28px */
+}
+
+.ml-8 {
+    margin-left: 2rem;
+    /* 32px */
+}
+
+/* Large margin-lefts */
+.ml-9 {
+    margin-left: 2.5rem;
+    /* 40px */
+}
+
+.ml-10 {
+    margin-left: 3rem;
+    /* 48px */
+}
+
+.ml-12 {
+    margin-left: 4rem;
+    /* 64px */
+}
+
+.ml-16 {
+    margin-left: 6rem;
+    /* 96px */
+}
+
+.ml-20 {
+    margin-left: 8rem;
+    /* 128px */
+}
+
+.ml-24 {
+    margin-left: 12rem;
+    /* 192px */
+}
+
+.ml-32 {
+    margin-left: 16rem;
+    /* 256px */
+}
+
+/* Utility classes for padding spacing */
+
+/* Small paddings */
+.p-1 {
+    padding: 0.25rem;
+    /* 4px */
+}
+
+.p-2 {
+    padding: 0.5rem;
+    /* 8px */
+}
+
+.p-3 {
+    padding: 0.75rem;
+    /* 12px */
+}
+
+.p-4 {
+    padding: 1rem;
+    /* 16px */
+}
+
+/* Medium paddings */
+.p-5 {
+    padding: 1.25rem;
+    /* 20px */
+}
+
+.p-6 {
+    padding: 1.5rem;
+    /* 24px */
+}
+
+.p-7 {
+    padding: 1.75rem;
+    /* 28px */
+}
+
+.p-8 {
+    padding: 2rem;
+    /* 32px */
+}
+
+/* Large paddings */
+.p-9 {
+    padding: 2.5rem;
+    /* 40px */
+}
+
+.p-10 {
+    padding: 3rem;
+    /* 48px */
+}
+
+.p-12 {
+    padding: 4rem;
+    /* 64px */
+}
+
+.p-16 {
+    padding: 6rem;
+    /* 96px */
+}
+
+.p-20 {
+    padding: 8rem;
+    /* 128px */
+}
+
+.p-24 {
+    padding: 12rem;
+    /* 192px */
+}
+
+.p-32 {
+    padding: 16rem;
+    /* 256px */
+}
+
+/* Utility classes for padding-top spacing */
+
+/* Small padding-tops */
+.pt-1 {
+    padding-top: 0.25rem;
+    /* 4px */
+}
+
+.pt-2 {
+    padding-top: 0.5rem;
+    /* 8px */
+}
+
+.pt-3 {
+    padding-top: 0.75rem;
+    /* 12px */
+}
+
+.pt-4 {
+    padding-top: 1rem;
+    /* 16px */
+}
+
+/* Medium padding-tops */
+.pt-5 {
+    padding-top: 1.25rem;
+    /* 20px */
+}
+
+.pt-6 {
+    padding-top: 1.5rem;
+    /* 24px */
+}
+
+.pt-7 {
+    padding-top: 1.75rem;
+    /* 28px */
+}
+
+.pt-8 {
+    padding-top: 2rem;
+    /* 32px */
+}
+
+/* Large padding-tops */
+.pt-9 {
+    padding-top: 2.5rem;
+    /* 40px */
+}
+
+.pt-10 {
+    padding-top: 3rem;
+    /* 48px */
+}
+
+.pt-12 {
+    padding-top: 4rem;
+    /* 64px */
+}
+
+.pt-16 {
+    padding-top: 6rem;
+    /* 96px */
+}
+
+.pt-20 {
+    padding-top: 8rem;
+    /* 128px */
+}
+
+.pt-24 {
+    padding-top: 12rem;
+    /* 192px */
+}
+
+.pt-32 {
+    padding-top: 16rem;
+    /* 256px */
+}
+
+/* Utility classes for padding-bottom spacing */
+
+/* Small padding-bottoms */
+.pb-1 {
+    padding-bottom: 0.25rem;
+    /* 4px */
+}
+
+.pb-2 {
+    padding-bottom: 0.5rem;
+    /* 8px */
+}
+
+.pb-3 {
+    padding-bottom: 0.75rem;
+    /* 12px */
+}
+
+.pb-4 {
+    padding-bottom: 1rem;
+    /* 16px */
+}
+
+/* Medium padding-bottoms */
+.pb-5 {
+    padding-bottom: 1.25rem;
+    /* 20px */
+}
+
+.pb-6 {
+    padding-bottom: 1.5rem;
+    /* 24px */
+}
+
+.pb-7 {
+    padding-bottom: 1.75rem;
+    /* 28px */
+}
+
+.pb-8 {
+    padding-bottom: 2rem;
+    /* 32px */
+}
+
+/* Large padding-bottoms */
+.pb-9 {
+    padding-bottom: 2.5rem;
+    /* 40px */
+}
+
+.pb-10 {
+    padding-bottom: 3rem;
+    /* 48px */
+}
+
+.pb-12 {
+    padding-bottom: 4rem;
+    /* 64px */
+}
+
+.pb-16 {
+    padding-bottom: 6rem;
+    /* 96px */
+}
+
+.pb-20 {
+    padding-bottom: 8rem;
+    /* 128px */
+}
+
+.pb-24 {
+    padding-bottom: 12rem;
+    /* 192px */
+}
+
+.pb-32 {
+    padding-bottom: 16rem;
+    /* 256px */
+}

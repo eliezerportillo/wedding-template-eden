@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Nuestra Boda | Merari & Misael">
+    <meta property="og:title" content="Nuestra Boda | Lizbeth & Joel">
     <meta property="og:description" content="7 de julio de 2024">
     <meta property="og:image" content="https://merari-misael.web.app/img/preview_photo.jpg">
 
     <title>Nuestra boda</title>
     <link rel="stylesheet" href="styles/fonts.css"> <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="styles/styles.css"> <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="styles/flexbox.css"> <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="styles/spacing.css"> <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="styles/text.css"> <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="styles/photo.modal.css">
 
 </head>
@@ -19,42 +22,99 @@
 
     <!-- Header -->
     <section id="my-header-section" class="my-section header-section">
-        <div class="overlay fx-row ">
-            <div class="fx-flex names">
-                <h1 class=" fx-column fx-start">
+        <div class="overlay d-flex flex-row justify-center align-end">
+            <div class="d-flex flex-column gap-1 mb-3">
+                <div class="names">
                     <span id="brideName"></span>
-                    <span class="ml-10">
-                        <span class="superindice">&</span><span id="groomName"></span>
-                    </span>
-                </h1>
+                    <span>&</span>
+                    <span id="groomName"></span>
+                </div>
+                <div>
+                    <span id="weddingDate" class="text-uppercase"></span>
+                </div>
             </div>
-            <div class="fx-flex"></div>
-            <div class="fx-flex"></div>
-
         </div>
     </section>
 
     <!-- Countdown -->
     <section id="my-countdown-section" class="my-section countdown-section">
-        <div class="inner-space section-tone-1">
-            <!-- <h2 class="title-1">Nuestra Boda</h2> -->
-            <span id="weddingDate" class="font-retro"></span>
-        </div>
-        <div class="inner-space section-tone-2 accent">
-            <div class="fx-row">
-                <div class="fx-column">
+        <div class="d-flex flex-column inner-space section-tone-2 gap-4">
+            <h2 class="title-1 text-2xl">Cuenta Regresiva</h2>
+            <div class="d-flex flex-row justify-center align-center gap-2 text-uppercase">
+                <div class="fx-column gap-1">
                     <span id="countdown-days" class="counter-text"></span>
-                    <span class="font-retro">Dias</span>
+                    <span class="font-retro">Día<span class="superindice">(s)</span></span>
                 </div>
-                <div class="fx-column">
+                <div class="fx-column gap-1">
                     <span id="countdown-hours" class="counter-text"></span>
-                    <span class="font-retro">Horas</span>
+                    <span class="font-retro">Hora<span class="superindice">(s)</span></span>
                 </div>
-                <div class="fx-column">
+                <div class="fx-column gap-1">
                     <span id="countdown-minutes" class="counter-text"></span>
-                    <span class="font-retro">Minutos</span>
+                    <span class="font-retro">Minuto<span class="superindice">(s)</span></span>
+                </div>
+                <div class="fx-column gap-1">
+                    <span id="countdown-seconds" class="counter-text"></span>
+                    <span class="font-retro">Segundo<span class="superindice">(s)</span></span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="my-carousel-section" class="my-section photo-carousel">
+        <div class="photo-wrapper">
+            <div class="photo"><img data-src="./img/photo_grid_1.jpg" alt="Photo 1" loading="lazy"></div>
+            <div class="photo"><img data-src="./img/photo_grid_2.jpg" alt="Photo 2" loading="lazy"></div>
+            <div class="photo"><img data-src="./img/photo_grid_3.jpg" alt="Photo 3" loading="lazy"></div>
+            <div class="photo"><img data-src="./img/photo_grid_4.jpg" alt="Photo 4" loading="lazy"></div>
+            <div class="photo"><img data-src="./img/photo_grid_5.jpg" alt="Photo 5" loading="lazy"></div>
+            <div class="photo"><img data-src="./img/photo_grid_6.jpg" alt="Photo 6" loading="lazy"></div>
+            <div class="photo"><img data-src="./img/photo_grid_1.jpg" alt="Photo 8" loading="lazy"></div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="my-rsvp-section" class="my-section rsvp-section">
+        <div class="inner-space d-flex flex-column justify-center align-center">
+            <h2 class="text-xl text-uppercase">Itinerario</h2>
+            <div style="height: 600px;"></div>
+        </div>
+
+
+    </section>
+    <!-- Confirmation -->
+    <section id="my-congirmation-section" class="my-section">
+        <div class="inner-space section-tone-2 accent">
+            <div class="d-flex flex-column justify-center align-center gap-2 text-center">
+
+                <p class="text-sm">«SERÍA UN PLACER PARA NOSOTROS CONTAR CON TU PRESENCIA <br>
+                    EN UNO DE LOS DÍAS MÁS IMPORTANTES EN NUESTRA VIDA»</p>
+
+                <div class="pill pill-small text-uppercase text-md">
+                    Confirma tu asistencia
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- great Quote section -->
+    <section id="my-quote-section" class="my-section">
+        <div class="confirmation-section">
+
+            <div class="d-flex flex-column justify-center align-center flex-start pt-6 mr-6 ml-6 text-sm">
+
+                <p class="text-justify">6. PONME COMO UN SELLO SOBRE TU CORAZÓN, COMO UNA <br>
+                    MARCA SOBRE TU BRAZO; PORQUE FUERTE ES COMO LA MUERTE <br>
+                    EL AMOR; DUROS COMO EL SEOL LOS CELOS; SUS BRASAS, <br>
+                    BRASAS DE FUEGO, FUERTE LLAMA. 7. LAS MUCHAS AGUAS NO <br>
+                    PODRÁN APAGAR EL AMOR, NI LO AHOGARÁN LOS RÍOS.</p>
+                <p>CANTARES 8:67</p>
+
+            </div>
+
         </div>
     </section>
 
@@ -89,80 +149,11 @@
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="my-carousel-section" class="my-section photo-carousel">
-        <div class="photo-wrapper">
-            <div class="photo"><img data-src="./img/photo_grid_3.jpg" alt="Photo 3" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_8.jpg" alt="Photo 8" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_1.jpg" alt="Photo 1" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_2.jpg" alt="Photo 2" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_4.jpg" alt="Photo 4" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_5.jpg" alt="Photo 5" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_6.jpg" alt="Photo 6" loading="lazy"></div>
-        </div>
-    </section>
 
-    <!-- great Quote section -->
-    <section id="my-quote-section" class="my-section quote-section">
-        <div class="inner-space section-tone-2 accent">
-            <div class="fx-column">
-                <div style="text-align: right; margin: 0 1rem;">
-                    <p>Mejor son dos que uno, porque obtienen más fruto de su esfuerzo. </p>
-                    <p>Uno solo puede ser vencido, pero dos pueden resistir. <br>
-                        ¡La cuerda de tres hilos no se rompe fácilmente!</p>
-                    <span>Eclesiastés 4:9 y 12</span>
-                </div>
-            </div>
 
-        </div>
-    </section>
 
-    <!-- RSVP -->
-    <section id="my-rsvp-section" class="my-section rsvp-section section-tone-1">
-        <h2 class="rsvp-content-header">Itinerario</h2>
-        <div class="inner-space rsvp-content">
 
-            <!-- caremony -->
-            <div class="rsvp-ceremony-content">
-                <div class="rsvp-text">
-                    <span class="rsvp-header">Ceremonia Religiosa</span>
-                    <span id="ceremonyTitle" class="rsvp-title"></span>
-                    <span id="ceremonyAddress" class="rsvp-address"></span>
-                    <div class="rsvp-hour">
-                        <span>Hora: </span>
-                        <span id="ceremonyHour"></span>
-                    </div>
-                    <div class="rsvp-button">
-                        <a id="ceremonyLink" class="font-retro" target="_blank">Ver Mapa</a>
-                    </div>
-                </div>
-                <div class="rsvp-image">
-                    <img id="ceremonyImage" alt="Foto del lugar" loading="lazy">
-                </div>
-            </div>
-            <!-- reception -->
-            <div class="rsvp-reception-content">
 
-                <div class="rsvp-image">
-                    <img id="receptionImage" alt="Foto del lugar" loading="lazy">
-                </div>
-                <div class="rsvp-text">
-                    <span class="rsvp-header">Recepción</span>
-                    <span id="receptionTitle" class="rsvp-title"></span>
-                    <span id="receptionAddress" class="rsvp-address"></span>
-                    <div class="rsvp-hour">
-                        <span>Hora: </span>
-                        <span id="receptionHour"></span>
-                    </div>
-                    <div class="rsvp-button">
-                        <a id="receptionLink" class="font-retro" target="_blank">Ver Mapa</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
 
     <!-- Dress code section -->
     <section id="my-dress-code-section" class="my-section dress-code-section">
@@ -231,30 +222,7 @@
         </div>
     </section>
 
-    <!-- Confirmation -->
-    <section id="my-congirmation-section" class="my-section">
-        <div class="confirmation-section parallax">
-            <div class="container">
-                <div class="overlay fx-column  ">
 
-            <div>
-                <span class="title-1 accent">Confirma tu</span>
-                <br>
-                <span class="title-2 accent" style="margin-left: 135px;">Asistencia</span>
-            </div>
-
-            <p class="title-1 accent">Lo más importante para <br class="br">nosotros, es tu compañia</p>
-
-            <p class="accent">Da click en el botón inferior para confirmar tu asistencia</p>
-
-            <a class="confirmation-button pill"
-                href="https://api.whatsapp.com/send?phone=526645615575&text=¡Hola! Quiero confirmar mi asistencia para tu boda. Nombre(s):"
-                target="_blank">Confirmación</a>
-
-            </div>
-        </div>
-    </div>
-</section>
 
     <!-- Hotels -->
     <section id="my-hotels-section" class="my-section">

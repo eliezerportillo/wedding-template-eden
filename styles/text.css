@@ -1,0 +1,74 @@
+/* Utility classes for text transformation */
+
+/* Uppercase text */
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+/* Lowercase text */
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+/* Capitalize text */
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+/* No text transformation */
+.text-normal-case {
+    text-transform: none;
+}
+
+/* Utility classes for text alignment */
+
+/* Align text to the left */
+.text-left {
+    text-align: left;
+}
+
+/* Align text to the center */
+.text-center {
+    text-align: center;
+}
+
+/* Align text to the right */
+.text-right {
+    text-align: right;
+}
+
+/* Justify text */
+.text-justify {
+    text-align: justify;
+}
+
+/* Utility classes for text sizing  */
+/* Small text */
+.text-sm {
+    font-size: 0.875rem;
+    /* 14px */
+}
+
+/* Medium text */
+.text-md {
+    font-size: 1rem;
+    /* 16px */
+}
+
+/* Large text */
+.text-lg {
+    font-size: 1.25rem;
+    /* 20px */
+}
+
+/* Extra large text */
+.text-xl {
+    font-size: 1.5rem;
+    /* 24px */
+}
+
+/* 2X large text */
+.text-2xl {
+    font-size: 2rem;
+    /* 32px */
+}

@@ -1,30 +1,30 @@
 const settings = {
     eventInfo: {
-        dateTime: '2024-07-07T21:00:00Z',
+        dateTime: '2025-06-22T18:00:00-07:00',
 
         rsvp: {
             ceremony: {
-                dateTime: '2024-07-07T14:00:00',
-                name: '8va. IAFCJ',
-                address: 'C. Hierro 599, Guadalajara, 22110 Tijuana, B.C.',
-                addressLink: 'https://maps.app.goo.gl/wgduuySj1rwZyvyGA',
+                dateTime: '2025-06-22T18:00:00',
+                name: '1ra. IAFCJ',
+                address: 'Rio Bravo 203, Marrón, 22015 Tijuana, B.C.',
+                addressLink: 'https://maps.app.goo.gl/FUnK5mibJq2fBo5Y9',
                 image: './img/ceremony_photo.png'
             },
             reception: {
                 dateTime: '2023-07-07T16:00:00',
-                name: 'Jardín Sol y Luna',
-                address: 'Vicente Guerrero 16, Machado Sur, 22703 Playas de Rosarito, B.C.',
-                addressLink: 'https://maps.app.goo.gl/5L2gwQ6qW6W5Ekow5',
+                name: 'Espacio Galarza Eventos',
+                address: 'Av. Ermita Sur 4744, Reynoso, 22106 Tijuana, B.C.',
+                addressLink: 'https://maps.app.goo.gl/4zCQ9uwsiKkaiJ2g6',
                 image: './img/reception_photo.png'
             }
         },
 
     },
     bride: {
-        name: 'Merari'
+        name: 'Lizeth'
     },
     groom: {
-        name: 'Misael'
+        name: 'Joel'
     },
 
     sections: [
@@ -118,10 +118,12 @@ function initCountdown(date) {
         const daysElement = document.getElementById('countdown-days');
         const hoursElement = document.getElementById('countdown-hours');
         const minutesElement = document.getElementById('countdown-minutes');
+        const secondsElement = document.getElementById('countdown-seconds');
 
         daysElement.innerHTML = days;
         hoursElement.innerHTML = hours;
         minutesElement.innerHTML = minutes;
+        secondsElement.innerHTML = seconds;
     }
 
     setInterval(updateCountdown, 1000);
@@ -207,18 +209,25 @@ function initScollElements() {
 
 
 let carouselShown;
+let carouselScroll = 0;
 
 function initCarousel() {
     const photoWrapper = document.querySelector('.photo-wrapper');
     carouselShown = false;
     window.addEventListener('scroll', function () {
-        const distanceFromTop = photoWrapper.getBoundingClientRect().top;
         if (!carouselShown && isInViewport(photoWrapper)) {
             carouselShown = true
         }
 
-        photoWrapper.style.transform = `translateX(-${distanceFromTop}px)`;
         if (carouselShown) {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > carouselScroll) {
+                carouselScroll += 1; // Increment when scrolling down
+            } else if (currentScroll < carouselScroll) {
+                carouselScroll -= 1; // Decrement when scrolling up
+            }
+            photoWrapper.style.transform = `translateX(-${currentScroll}px)`;
         }
     });
 
