@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Nuestra Boda | Lizbeth & Joel">
-    <meta property="og:description" content="7 de julio de 2024">
-    <meta property="og:image" content="https://merari-misael.web.app/img/preview_photo.jpg">
+    <meta property="og:description" content="22 de junio de 2025">
+    <meta property="og:image" content="https://lizeth-joel.web.app/img/preview_photo.jpg">
 
     <title>Nuestra boda</title>
     <link rel="stylesheet" href="styles/fonts.css"> <!-- Link to your custom CSS -->
@@ -18,11 +18,12 @@
     <link rel="stylesheet" href="styles/photo.modal.css">
     <link rel="stylesheet" href="styles/player.css">
     <link rel="stylesheet" href="styles/itinerary.css">
+    <link rel="stylesheet" href="styles/util.css">
 
 </head>
 
 <body>
-    <audio id="audio" src="./cancion.mp3">
+    <audio id="audio" src="cancion.mp3">
 
     </audio>
     <button class="btn-musica hide pausa" onclick="togglePlay()">
@@ -167,10 +168,11 @@
 
             <div class="d-flex flex-column justify-center align-center flex-start pt-6 mr-6 ml-6 text-sm">
 
-                <p class="text-justify leading-tight">6. PONME COMO UN SELLO SOBRE TU CORAZÓN, COMO UNA <br>
-                    MARCA SOBRE TU BRAZO; PORQUE FUERTE ES COMO LA MUERTE <br>
-                    EL AMOR; DUROS COMO EL SEOL LOS CELOS; SUS BRASAS, <br>
-                    BRASAS DE FUEGO, FUERTE LLAMA. 7. LAS MUCHAS AGUAS NO <br>
+                <p class="leading-tight text-center">6. PONME COMO UN SELLO SOBRE TU CORAZÓN, COMO UNA <br
+                        class="d-none-xs d-node.sm">
+                    MARCA SOBRE TU BRAZO; PORQUE FUERTE ES COMO LA MUERTE <br class="d-none-xs d-node-sm">
+                    EL AMOR; DUROS COMO EL SEOL LOS CELOS; SUS BRASAS, <br class="d-none-xs d-node-sm">
+                    BRASAS DE FUEGO, FUERTE LLAMA. 7. LAS MUCHAS AGUAS NO <br class="d-none-xs d-node-sm">
                     PODRÁN APAGAR EL AMOR, NI LO AHOGARÁN LOS RÍOS.</p>
                 <p>CANTARES 8:67</p>
 
@@ -219,7 +221,15 @@
                 etapa, pueden hacerlo a través de:</p>
         </div>
 
-        <div class="d-flex flex-row flex-wrap justify-center align-center gap-4">
+        <div class="d-flex flex-row flex-wrap justify-center align-center gap-4 d-none-xs">
+
+            <img src="img/gifts_cash.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+            <img src="img/gifts_card.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+            <a href="https://www.target.com/gift-registry/gift/the-araujos-wedding">
+                <img src="img/gifts_list.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+            </a>
+        </div>
+        <div class="text-center d-none-gt-xs">
 
             <img src="img/gifts_cash.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
             <img src="img/gifts_card.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
@@ -287,7 +297,8 @@
 
     <!-- Parallax Section -->
     <section class="parallax-container">
-        <img class="parallax-background" src="./img/parallax_2.png" alt="Parallax Background">
+        <img class="parallax-background" style="object-position: 33% 50%;" src="./img/parallax_2.png"
+            alt="Parallax Background">
         <div class="parallax-content">
 
         </div>

@@ -1,0 +1,122 @@
+/* Utility classes to show and hide elements based on device sizes */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .d-none-xs {
+        display: none !important;
+    }
+
+    .d-block-xs {
+        display: block !important;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .d-none-sm {
+        display: none !important;
+    }
+
+    .d-block-sm {
+        display: block !important;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .d-none-md {
+        display: none !important;
+    }
+
+    .d-block-md {
+        display: block !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .d-none-lg {
+        display: none !important;
+    }
+
+    .d-block-lg {
+        display: block !important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .d-none-xl {
+        display: none !important;
+    }
+
+    .d-block-xl {
+        display: block !important;
+    }
+}
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .d-none-xxl {
+        display: none !important;
+    }
+
+    .d-block-xxl {
+        display: block !important;
+    }
+}
+
+/* Extra small devices and up (greater than 575.98px) */
+@media (min-width: 576px) {
+    .d-none-gt-xs {
+        display: none !important;
+    }
+
+    .d-block-gt-xs {
+        display: block !important;
+    }
+}
+
+/* Small devices and up (greater than 767.98px) */
+@media (min-width: 768px) {
+    .d-none-gt-sm {
+        display: none !important;
+    }
+
+    .d-block-gt-sm {
+        display: block !important;
+    }
+}
+
+/* Medium devices and up (greater than 991.98px) */
+@media (min-width: 992px) {
+    .d-none-gt-md {
+        display: none !important;
+    }
+
+    .d-block-gt-md {
+        display: block !important;
+    }
+}
+
+/* Large devices and up (greater than 1199.98px) */
+@media (min-width: 1200px) {
+    .d-none-gt-lg {
+        display: none !important;
+    }
+
+    .d-block-gt-lg {
+        display: block !important;
+    }
+}
+
+/* Extra large devices and up (greater than 1399.98px) */
+@media (min-width: 1400px) {
+    .d-none-gt-xl {
+        display: none !important;
+    }
+
+    .d-block-gt-xl {
+        display: block !important;
+    }
+}
