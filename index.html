@@ -14,20 +14,31 @@
     <link rel="stylesheet" href="styles/flexbox.css"> <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="styles/spacing.css"> <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="styles/text.css"> <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="styles/parallax.css"> <!-- Link to your custom CSS -->
     <link rel="stylesheet" href="styles/photo.modal.css">
+    <link rel="stylesheet" href="styles/player.css">
+    <link rel="stylesheet" href="styles/itinerary.css">
 
 </head>
 
 <body>
+    <audio id="audio" src="./cancion.mp3">
+
+    </audio>
+    <button class="btn-musica hide pausa" onclick="togglePlay()">
+        <i>
+            <div class="icono-silencio"></div>
+        </i>
+    </button>
 
     <!-- Header -->
     <section id="my-header-section" class="my-section header-section">
         <div class="overlay d-flex flex-row justify-center align-end">
             <div class="d-flex flex-column gap-1 mb-3">
-                <div class="names">
-                    <span id="brideName"></span>
+                <div class="names text-shadow-sm text-2xl">
+                    <span class="brideName"></span>
                     <span>&</span>
-                    <span id="groomName"></span>
+                    <span class="groomName"></span>
                 </div>
                 <div>
                     <span id="weddingDate" class="text-uppercase"></span>
@@ -76,9 +87,58 @@
 
     <!-- RSVP -->
     <section id="my-rsvp-section" class="my-section rsvp-section">
-        <div class="inner-space d-flex flex-column justify-center align-center">
+        <div class="inner-space d-flex flex-column justify-center align-center gap-5">
             <h2 class="text-xl text-uppercase">Itinerario</h2>
-            <div style="height: 600px;"></div>
+            <div class="timeline">
+                <div class="event">
+                    <div class="time d-flex justify-center">4:30 PM</div>
+                    <div class="vertical-line">
+                    </div>
+                    <div class="details d-flex flex-column justify-center align-center gap-1">
+                        <div class="icon">
+                            <img src="img/Icon_Ceremonia.png" alt="Ceremonia">
+                        </div>
+                        <div class="title">CEREMONIA</div>
+                        <div class="subtitle">1ra IAFCJ</div>
+                        <a href="https://maps.app.goo.gl/FUnK5mibJq2fBo5Y9" class="pill pill-small">VER MAPA</a>
+                    </div>
+                </div>
+                <div class="event left">
+                    <div class="time d-flex justify-center">6:00 PM</div>
+                    <div class="vertical-line">
+                    </div>
+                    <div class="details d-flex flex-column justify-center align-center gap-1">
+                        <div class="icon">
+                            <img src="img/Icon_Comida.png" alt="">
+                        </div>
+                        <div class="title">RECEPCIÓN</div>
+                        <div class="subtitle">Salón Espacio Galarza</div>
+                        <a href="https://maps.app.goo.gl/4zCQ9uwsiKkaiJ2g6" class="pill pill-small">VER MAPA</a>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="time d-flex justify-center">8:30 PM</div>
+                    <div class="vertical-line">
+                    </div>
+                    <div class="details d-flex flex-column justify-center align-center gap-1">
+                        <div class="icon">
+                            <img src="img/Icon_Iglesia.png" alt="">
+                        </div>
+                        <div class="title">CENA</div>
+                    </div>
+                </div>
+                <div class="event left">
+                    <div class="time d-flex justify-center">11:00 PM</div>
+                    <div class="vertical-line">
+                    </div>
+                    <div class="details d-flex flex-column justify-center align-center gap-1">
+                        <div class="icon">
+                            <img src="img/Icon_Salida.png" alt="">
+                        </div>
+                        <div class="title text-center">SALIDA DE LOS NOVIOS</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -91,9 +151,10 @@
                 <p class="text-sm">«SERÍA UN PLACER PARA NOSOTROS CONTAR CON TU PRESENCIA <br>
                     EN UNO DE LOS DÍAS MÁS IMPORTANTES EN NUESTRA VIDA»</p>
 
-                <div class="pill pill-small text-uppercase text-md">
+                <a href="https://wa.me/526641219146?text=%C2%A1Hola%21%2C%20quiero%20confirmarmar%20asitencia%20para%20la%20boda."
+                    class="pill pill-small text-uppercase text-md" target="_blank">
                     Confirma tu asistencia
-                </div>
+                </a>
 
             </div>
         </div>
@@ -106,7 +167,7 @@
 
             <div class="d-flex flex-column justify-center align-center flex-start pt-6 mr-6 ml-6 text-sm">
 
-                <p class="text-justify">6. PONME COMO UN SELLO SOBRE TU CORAZÓN, COMO UNA <br>
+                <p class="text-justify leading-tight text-center">6. PONME COMO UN SELLO SOBRE TU CORAZÓN, COMO UNA <br>
                     MARCA SOBRE TU BRAZO; PORQUE FUERTE ES COMO LA MUERTE <br>
                     EL AMOR; DUROS COMO EL SEOL LOS CELOS; SUS BRASAS, <br>
                     BRASAS DE FUEGO, FUERTE LLAMA. 7. LAS MUCHAS AGUAS NO <br>
@@ -114,72 +175,33 @@
                 <p>CANTARES 8:67</p>
 
             </div>
-
         </div>
     </section>
-
-    <!-- our story -->
-    <section id="my-story-section" class="my-section container">
-
-        <div class="inner-space story-section accent">
-            <div>
-                <img class="story-image" data-src="./img/story.png" alt="Imagen Vertical" loading="lazy">
-            </div>
-
-            <div>
-                <div class="story-title">
-
-                    <div class="hidden">
-                        <span class="title-1">Con la bendición de</span>
-                        <br>
-                        <span class="title-2" style="margin-left: 1rem;">Nuestros Padres</span>
-                    </div>
-
-
-                </div>
-                <div class="story-text" style="text-align: center;">
-
-                    <h2>José Juan Hernández Villa</h2>
-                    <h2>Reyna Lucía Valenzuela Bahumea</h2>
-                    <p class="title-1">&</p>
-                    <h2>Arturo Panama Gallardo</h2>
-                    <h2>Dalila Rodríguez López</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
 
 
     <!-- Dress code section -->
     <section id="my-dress-code-section" class="my-section dress-code-section">
-        <div class="inner-space section-tone-2 accent">
-            <div class="fx-column hidden">
-                <div>
-                    <span class="title-1">Código de </span>
-                    <br>
-                    <span class="title-2" style="margin-left: 4rem;">Vestimenta</span>
+        <div class="inner-space">
+            <div class="d-flex flex-column align-center gap-4 hidden">
+                <div class="d-flex flex-column align-center">
+                    <span class="text-xl text-uppercase">Código de vestimenta</span>
+                    <span class="text-sm text-uppercase">Formal</span>
                 </div>
 
-                <!-- Ladies and gentilements -->
-                <div class="fx-row fx-start">
-                    <div class="fx-column">
-                        <span class="font-retro">Damas</span>
-                        <img src="img/dess_code_w.png" alt="" loading="lazy">
-                        <span>Formal</span>
-                        <span>Vestido</span>
-                        <span>Largo | Midi</span>
-                        <span>No blanco | Beige</span>
+                <div class="d-flex flex-column justify-center align-center text-uppercase">
+                    <div class="d-flex flex-column align-center gap-1">
+                        <span class="font-bold text-md">Mujer</span>
+                        <span class="text-sm">Vestido largo/midi</span>
+                        <span class="text-sm">Abrigo recomendable</span>
+                        <span class="text-sm">No blanco | No colores claros</span>
                     </div>
-                    <div class="fx-column">
-                        <span class="font-retro">Caballeros</span>
-                        <img src="img/dress_code_m.png" alt="" loading="lazy">
-                        <span>Formal</span>
-                        <span>No azul marino</span>
+                    <img src="img/dress_code.png" style="max-height: 450px;" class="inner-space"
+                        alt="Código de vestimenta" loading="lazy">
+                    <div class="d-flex flex-column align-center gap-1">
+                        <span class="font-bold text-md">Hombre</span>
+                        <span class="text-sm">Traje formal</span>
+                        <span class="text-sm">Corbata</span>
+                        <span class="text-sm">Zapatos formales</span>
                     </div>
                 </div>
             </div>
@@ -187,95 +209,118 @@
     </section>
 
     <!-- Gifts -->
-    <section id="my-gifts-section" class="my-section container">
+    <section id="my-gifts-section" class="my-section section-tone-2">
 
-        <div class="inner-space gift-section accent">
+        <div class="inner-space d-flex flex-column justify-center align-center">
+            <h2 class="text-xl text-uppercase">Mesa de regalos</h2>
+            <span class="h-separator"></span>
+            <p class="text-center">Su compañía siempre será lo mas importante para <br>
+                nosotros, pero si deseas apoyarnos en nuestra nueva <br>
+                etapa, pueden hacerlo a través de:</p>
+        </div>
 
-            <p>Su presencia y compañía siempre será nuestro mejor regalo. <br>
-                Sin embargo, si desean obsequiarnos algo más, pueden hacerlo a través de:</p>
+        <div class="d-flex flex-row flex-wrap justify-center align-center gap-4">
 
-            <div class="gift-options">
-                <a class="gift-option hidden"
-                    href="https://www.amazon.com.mx/hz/wishlist/ls/2UZ62GQRM2RBX?ref_=wl_share" target="_blank">
-                    <h4 class="font-retro gift-option-title">Mesa de regalos</h4>
-                    <img data-src="./img/gift.png" alt="Imagen de Regalo" loading="lazy">
-                    <span class="gift-option-name">Amazon Wishlist</span>
-                </a>
+            <img src="img/gifts_cash.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+            <img src="img/gifts_card.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+            <a href="https://www.target.com/gift-registry/gift/the-araujos-wedding">
+                <img src="img/gifts_list.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+            </a>
+        </div>
+    </section>
 
-                <span class="h-separator"></span>
-                <span class="v-separator"></span>
-
-                <div class="gift-option hidden">
-                    <h4 class="font-retro gift-option-title">Lluvia de Sobres</h4>
-                    <img data-src="./img/letter.png" alt="Imagen de Sobre" loading="lazy">
-                    <span class="gift-option-name">
-                        HSBC
-                        <br>
-                        4910 8971 0387 2198
-                        <br>
-                        Misael Panama Rodriguez
-                    </span>
-                </div>
-            </div>
-
+    <!-- Parallax Section -->
+    <section class="parallax-container">
+        <img class="parallax-background" src="./img/parallax_1.png" alt="Parallax Background">
+        <div class="parallax-content">
 
         </div>
     </section>
 
+    <!-- No kids -->
+    <section id="my-story-section" class="inner-space">
 
+        <div class="d-flex flex-column justify-center align-center text-center">
+
+            <span class="text-2xl text-uppercase">No niños</span>
+            <span class="h-separator"></span>
+
+            <p class="text-sm text-uppercase">Aunque amamos a los niños, <br>
+                esta fiesta es solo para adultos.</p>
+        </div>
+    </section>
 
     <!-- Hotels -->
-    <section id="my-hotels-section" class="my-section">
-        <div class="hotels-section fx-column hidden">
+    <section id="my-hotels-section" class="inner-space my-section section-tone-2">
+        <div class="hotels-section d-flex flex-column justify-center align-center hidden">
 
-            <div>
-                <span class="title-1 accent">Sugerencias de</span>
-                <br>
-                <span class="title-2 accent" style="margin-left: 110px;">Hospedaje</span>
+            <span class="text-2xl text-uppercase">Sugerencia de hospedaje</span>
+            <span class="h-separator"></span>
+
+            <p class="text-uppercase">Marriot Hotel</p>
+            <a class="pill pill-small " href="https://maps.app.goo.gl/zxDzob73sBX9Jske9" target="_blank">Ver
+                mapa</a>
+            <p class="text-uppercase">Real Inn</p>
+            <a class="pill pill-small " href="https://maps.app.goo.gl/T9oRpqAsPiikac6GA" target="_blank">Ver
+                mapa</a>
+            <p>Grand Hotel</p>
+            <a class="pill pill-small " href="https://maps.app.goo.gl/sbnptm8UgbQaSACd7" target="_blank">Ver
+                mapa</a>
+            <p class="text-uppercase">City Express By Marriot</p>
+            <a class="pill pill-small " href="https://maps.app.goo.gl/UsXykBLgZN2CwNXq6" target="_blank">Ver
+                mapa</a>
+        </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="my-weather-section" class="my-section weather-section">
+        <div class="inner-space d-flex flex-column justify-center align-center">
+            <h2 class="text-xl text-uppercase">Clima</h2>
+            <span class="h-separator"></span>
+            <div class="inner-space weather-widget">
+                <iframe id="inlineFrameExample" title="Inline Frame Example" width="100%" height="220px" frameborder="0"
+                    src="./weather.html">
+                </iframe>
             </div>
+        </div>
+    </section>
 
-            <ul class="hotel-items">
-                <li>
-                    <p>City Express Plus by Marriot <br>Guadalajara Palomar</p>
-                    <a class="pill pill-small " href="https://maps.app.goo.gl/CATogBm2qXoJynQ46" target="_blank">Ver
-                        mapa</a>
-                </li>
-                <li>
-                    <p>Microtel Inn & Suits by <br>Wyndham Guadalajara Sur</p>
-                    <a class="pill pill-small " href="https://maps.app.goo.gl/UjNMhFTZEELiPrJ59" target="_blank">Ver
-                        mapa</a>
-                </li>
-                <li>
-                    <p>Hotel Marquiz</p>
-                    <a class="pill pill-small " href="https://maps.app.goo.gl/MMKZqws3uz5RB5eQ6" target="_blank">Ver
-                        mapa</a>
-                </li>
-                <li>
-                    <p>Ramada Encore Guadalajra Sur</p>
-                    <a class="pill pill-small " href="https://maps.app.goo.gl/v4FWWHQpMEMhumqv8" target="_blank">Ver
-                        mapa</a>
-                </li>
-            </ul>
-
+    <!-- Parallax Section -->
+    <section class="parallax-container">
+        <img class="parallax-background" src="./img/parallax_2.png" alt="Parallax Background">
+        <div class="parallax-content">
 
         </div>
     </section>
+
+
+
+
+
+
+
+
     <!-- hashtag section -->
     <section id="my-hashtag-section" class="my-section hashtag-section">
         <div class="inner-space section-tone-2 accent">
             <div>
-                <span>Utiliza el hashtag #BodaChesia</span>
+                <span>Utiliza el hashtag #LizethJoel</span>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="my-footer-section" class="my-section">
+    <footer id="my-footer-section" class="inner-space my-section">
 
-        <div style="padding: 64px 0;">
-            <span class="title-2">¡Te esperamos!</span>
+        <div class="names text-2xl">
+            <span class="brideName"></span>
+            <span>&</span>
+            <span class="groomName"></span>
         </div>
 
+        <span class="h-separator"></span>
+
+        <p>DISEÑADO POR: CESIA MORENO PHOTOGRAPHY Y CAOS CREATIVO</p>
     </footer>
 
     <!-- Modal's photo -->
@@ -287,7 +332,8 @@
         </div>
     </div>
 
-    <script src="index.js"></script> <!-- Link to your custom JS script -->
+    <script src="index.js"></script>
+    <script src="scripts/player.js"></script>
     <script>
 
 

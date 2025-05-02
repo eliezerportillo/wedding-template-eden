@@ -1,0 +1,66 @@
+.btn-musica div {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNCcgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0Jz48cGF0aCBkPSdNMyA5djZoNGw1IDVWNEw3IDlIM3ptMTMuNSAzYzAtMS43Ny0xLjAyLTMuMjktMi41LTQuMDN2OC4wNWMxLjQ4LS43MyAyLjUtMi4yNSAyLjUtNC4wMnpNMTQgMy4yM3YyLjA2YzIuODkuODYgNSAzLjU0IDUgNi43MXMtMi4xMSA1Ljg1LTUgNi43MXYyLjA2YzQuMDEtLjkxIDctNC40OSA3LTguNzdzLTIuOTktNy44Ni03LTguNzd6Jy8+PHBhdGggZD0nTTAgMGgyNHYyNEgweicgZmlsbD0nbm9uZScvPjwvc3ZnPg==);
+}
+
+button.pausa div {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNCcgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0Jz48cGF0aCBkPSdNMTYuNSAxMmMwLTEuNzctMS4wMi0zLjI5LTIuNS00LjAzdjIuMjFsMi40NSAyLjQ1Yy4wMy0uMi4wNS0uNDEuMDUtLjYzem0yLjUgMGMwIC45NC0uMiAxLjgyLS41NCAyLjY0bDEuNTEgMS41MUMyMC42MyAxNC45MSAyMSAxMy41IDIxIDEyYzAtNC4yOC0yLjk5LTcuODYtNy04Ljc3djIuMDZjMi44OS44NiA1IDMuNTQgNSA2Ljcxek00LjI3IDNMMyA0LjI3IDcuNzMgOUgzdjZoNGw1IDV2LTYuNzNsNC4yNSA0LjI1Yy0uNjcuNTItMS40Mi45My0yLjI1IDEuMTh2Mi4wNmMxLjM4LS4zMSAyLjYzLS45NSAzLjY5LTEuODFMMTkuNzMgMjEgMjEgMTkuNzNsLTktOUw0LjI3IDN6TTEyIDRMOS45MSA2LjA5IDEyIDguMThWNHonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+);
+}
+
+button.btn-musica:hover {
+    width: 230px;
+}
+
+.btn-musica {
+    z-index: 10000;
+    background: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    height: 48px;
+    width: 240px;
+    border-radius: 32px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .1);
+    border: 1px solid #f2f2f2;
+    outline: none;
+    overflow: hidden;
+    transition: all .6s ease-in-out;
+    display: block;
+}
+
+.btn-musica i {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff
+}
+
+.btn-musica i div {
+    opacity: .65;
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    width: 26px;
+    height: 26px;
+}
+
+.btn-musica:before {
+    font-size: 14px;
+    width: 200px;
+    left: 26px;
+    text-align: left;
+    top: 13px;
+    position: absolute;
+    content: "¿Deseas pausar la música?";
+}
+
+.btn-musica.pausa:before {
+    content: "¿Deseas escuchar la música?";
+}
+
+.btn-musica.hide {
+    width: 48px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .12);
+}

@@ -39,6 +39,8 @@ const settings = {
         'my-gifts-section',
         'my-congirmation-section',
         // 'my-hashtag-section',
+        'my-hotels-section',
+        'my-weather-section',
         'my-footer-section'
     ]
 }
@@ -53,7 +55,7 @@ function onInit() {
     loadImages();
     initScollElements();
     initCarousel();
-    setRsvpInfo(settings);
+    // setRsvpInfo(settings);
 }
 
 function showMySections(settings) {
@@ -71,11 +73,16 @@ function setTitlePage(settings) {
 
 
 function setCoupleNames(settings) {
-    const groomElement = document.getElementById('groomName');
-    const brideElement = document.getElementById('brideName');
+    const groomElements = document.querySelectorAll('.groomName');
+    const brideElements = document.querySelectorAll('.brideName');
 
-    groomElement.innerHTML = settings.groom.name;
-    brideElement.innerHTML = settings.bride.name;
+    groomElements.forEach(element => {
+        element.innerHTML = settings.groom.name;
+    });
+
+    brideElements.forEach(element => {
+        element.innerHTML = settings.bride.name;
+    });
 }
 
 function setRsvpInfo(settings) {

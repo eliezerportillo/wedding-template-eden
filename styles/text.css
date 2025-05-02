@@ -63,7 +63,7 @@
 
 /* Extra large text */
 .text-xl {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     /* 24px */
 }
 
@@ -71,4 +71,105 @@
 .text-2xl {
     font-size: 2rem;
     /* 32px */
+}
+
+/* Utility classes for line height */
+
+/* Tight line height */
+.leading-tight {
+    line-height: 1.25;
+}
+
+/* Snug line height */
+.leading-snug {
+    line-height: 1.375;
+}
+
+/* Normal line height */
+.leading-normal {
+    line-height: 1.5;
+}
+
+/* Relaxed line height */
+.leading-relaxed {
+    line-height: 1.625;
+}
+
+/* Loose line height */
+.leading-loose {
+    line-height: 2;
+}
+
+/* Utility classes for font weight */
+
+/* Thin font weight */
+.font-thin {
+    font-weight: 100;
+}
+
+/* Extra light font weight */
+.font-extralight {
+    font-weight: 200;
+}
+
+/* Light font weight */
+.font-light {
+    font-weight: 300;
+}
+
+/* Normal font weight */
+.font-normal {
+    font-weight: 400;
+}
+
+/* Medium font weight */
+.font-medium {
+    font-weight: 500;
+}
+
+/* Semi-bold font weight */
+.font-semibold {
+    font-weight: 600;
+}
+
+/* Bold font weight */
+.font-bold {
+    font-weight: 700;
+}
+
+/* Extra bold font weight */
+.font-extrabold {
+    font-weight: 800;
+}
+
+/* Black font weight */
+.font-black {
+    font-weight: 900;
+}
+
+/* Utility classes for text shadow */
+
+/* No text shadow */
+.text-shadow-none {
+    text-shadow: none;
+}
+
+/* Small text shadow */
+.text-shadow-sm {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Medium text shadow */
+.text-shadow-md {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Large text shadow */
+.text-shadow-lg {
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Extra large text shadow */
+.text-shadow-xl {
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
 }

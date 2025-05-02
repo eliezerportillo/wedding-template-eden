@@ -9,6 +9,10 @@
     display: none;
 }
 
+.weather-widget {
+    width: 100%;
+}
+
 
 .container {
     width: 100%;
@@ -167,7 +171,7 @@ h5 {
 }
 
 #weddingDate {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .font-retro {
@@ -268,11 +272,8 @@ h5 {
 
 
 .names {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
-    font-size: 1.7rem;
     font-family: 'SacredValley', sans-serif;
     align-items: flex-end;
-
 }
 
 .story-section {
@@ -380,12 +381,7 @@ h5 {
 }
 
 .gift-option {
-    height: 18.75rem;
-    flex-direction: column;
-    box-sizing: border-box;
-    display: flex;
-    place-content: center;
-    align-items: center;
+    max-width: 220px;
 }
 
 .gift-option .gift-option-title {
@@ -440,11 +436,11 @@ h5 {
 .confirmation-section {
 
     background-image: url('../img/confirmation.png');
-    background-size: 113%;
+    background-size: 137%;
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: center;
-    height: 100vh;
+    height: 60vh;
     color: var(--secondary-color);
 }
 
