@@ -46,44 +46,44 @@
 
 /* Extra small text */
 .text-xs {
-    font-size: 0.466666666rem;
-    /* 16px */
+    font-size: 0.56rem;
+    /* 19.2px */
 }
 
 /* Small text */
 .text-sm {
-    font-size: 0.7rem;
-    /* 24px */
+    font-size: 0.74rem;
+    /* 28.8px */
 }
 
 /* Medium text */
 .text-md {
-    font-size: 0.816666666rem;
-    /* 28px */
+    font-size: 0.98rem;
+    /* 33.6px */
 }
 
 /* Large text */
 .text-lg {
-    font-size: 0.933333333rem;
-    /* 32px */
+    font-size: 1rem;
+    /* 38.4px */
 }
 
 /* Larger text */
 .text-lg-alt {
-    font-size: 1.05rem;
-    /* 36px */
+    font-size: 1.071rem;
+    /* 36.72px */
 }
 
 /* Extra large text */
 .text-xl {
-    font-size: 1.4rem;
-    /* 48px */
+    font-size: 1.28rem;
+    /* 57.6px */
 }
 
 /* 2X large text */
 .text-2xl {
-    font-size: 1.866666664rem;
-    /* 64px */
+    font-size: 1.674rem;
+    /* 65.28px */
 }
 
 /* Utility classes for line height */

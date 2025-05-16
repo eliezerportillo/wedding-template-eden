@@ -54,6 +54,7 @@ button.btn-musica:hover {
     top: 13px;
     position: absolute;
     content: "¿Deseas pausar la música?";
+    color: var(--primary-color);
 }
 
 .btn-musica.pausa:before {

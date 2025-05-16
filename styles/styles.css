@@ -6,7 +6,7 @@
 }
 
 .logo {
-    max-width: 220px
+    max-width: 170px
 }
 
 .my-section {
@@ -390,8 +390,8 @@ h5 {
 
 .dress-color {
     border: 1px solid var(--primary-color);
-    height: 15px;
-    width: 45px;
+    height: 13px;
+    width: 42px;
 }
 
 .dress-color.color-1 {
@@ -424,7 +424,7 @@ h5 {
 
 .letter {
     background-image: url('../img/letter.png');
-    background-size: 100%;
+    background-size: 89%;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: center;
@@ -486,7 +486,6 @@ h5 {
 
 .pill-small {
     padding: 0.25rem 0.5rem;
-    min-width: 120px;
     text-align: center;
 }
 
