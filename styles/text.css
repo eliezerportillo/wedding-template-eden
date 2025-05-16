@@ -42,62 +42,75 @@
     text-align: justify;
 }
 
-/* Utility classes for text sizing  */
+/* Utility classes for text sizing */
+
+/* Extra small text */
+.text-xs {
+    font-size: 0.466666666rem;
+    /* 16px */
+}
+
 /* Small text */
 .text-sm {
-    font-size: 0.875rem;
-    /* 14px */
+    font-size: 0.7rem;
+    /* 24px */
 }
 
 /* Medium text */
 .text-md {
-    font-size: 1rem;
-    /* 16px */
+    font-size: 0.816666666rem;
+    /* 28px */
 }
 
 /* Large text */
 .text-lg {
-    font-size: 1.25rem;
-    /* 20px */
+    font-size: 0.933333333rem;
+    /* 32px */
+}
+
+/* Larger text */
+.text-lg-alt {
+    font-size: 1.05rem;
+    /* 36px */
 }
 
 /* Extra large text */
 .text-xl {
-    font-size: 1.75rem;
-    /* 24px */
+    font-size: 1.4rem;
+    /* 48px */
 }
 
 /* 2X large text */
 .text-2xl {
-    font-size: 2rem;
-    /* 32px */
+    font-size: 1.866666664rem;
+    /* 64px */
 }
 
 /* Utility classes for line height */
 
 /* Tight line height */
 .leading-tight {
-    line-height: 1.25;
+    line-height: 0.8;
 }
 
 /* Snug line height */
 .leading-snug {
-    line-height: 1.375;
+    line-height: 0.9;
 }
 
 /* Normal line height */
 .leading-normal {
-    line-height: 1.5;
+    line-height: 1;
 }
 
 /* Relaxed line height */
 .leading-relaxed {
-    line-height: 1.625;
+    line-height: 1.1;
 }
 
 /* Loose line height */
 .leading-loose {
-    line-height: 2;
+    line-height: 1.2;
 }
 
 /* Utility classes for font weight */

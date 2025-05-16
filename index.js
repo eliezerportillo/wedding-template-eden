@@ -1,17 +1,17 @@
 const settings = {
     eventInfo: {
-        dateTime: '2025-06-22T18:00:00-07:00',
+        dateTime: '2025-08-09T18:00:00-07:00',
 
         rsvp: {
             ceremony: {
-                dateTime: '2025-06-22T18:00:00',
+                dateTime: '2025-08-09T18:00:00',
                 name: '1ra. IAFCJ',
                 address: 'Rio Bravo 203, Marrón, 22015 Tijuana, B.C.',
                 addressLink: 'https://maps.app.goo.gl/FUnK5mibJq2fBo5Y9',
                 image: './img/ceremony_photo.png'
             },
             reception: {
-                dateTime: '2023-07-07T16:00:00',
+                dateTime: '2025-08-09T16:00:00',
                 name: 'Espacio Galarza Eventos',
                 address: 'Av. Ermita Sur 4744, Reynoso, 22106 Tijuana, B.C.',
                 addressLink: 'https://maps.app.goo.gl/4zCQ9uwsiKkaiJ2g6',
@@ -21,10 +21,10 @@ const settings = {
 
     },
     bride: {
-        name: 'Lizeth'
+        name: 'Paola'
     },
     groom: {
-        name: 'Joel'
+        name: 'Alberto'
     },
 
     sections: [
@@ -143,11 +143,11 @@ function formatDate(weddingDate) {
         "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
     ];
 
-    const day = date.getDate();
-    const monthIndex = date.getMonth();
-    const year = date.getFullYear();
+    const weddingDay = date.getDate().toString().padStart(2, '0'); // Add leading zero for single-digit days
+    const weddingMonth = months[date.getMonth()];
+    const weddingYear = date.getFullYear();
 
-    return `${day} de ${months[monthIndex]} del ${year}`;
+    return { weddingDay, weddingMonth, weddingYear };
 }
 
 function convertUTCtoLocalTime(utcDateString) {
@@ -169,8 +169,23 @@ function convertUTCtoLocalTime(utcDateString) {
 
 
 function setWeedingDate(date) {
-    const weddingDateElement = document.getElementById('weddingDate');
-    weddingDateElement.innerHTML = formatDate(date);
+    const { weddingDay, weddingMonth, weddingYear } = formatDate(date);
+
+    const weddingDayElement = document.getElementById('weddingDay');
+    const weddingMonthElement = document.getElementById('weddingMonth');
+    const weddingYearElement = document.getElementById('weddingYear');
+
+    if (weddingDayElement) {
+        weddingDayElement.innerHTML = weddingDay;
+    }
+
+    if (weddingMonthElement) {
+        weddingMonthElement.innerHTML = weddingMonth;
+    }
+
+    if (weddingYearElement) {
+        weddingYearElement.innerHTML = weddingYear;
+    }
 }
 
 function setWeedingHour(date, selector) {
@@ -222,20 +237,20 @@ function initCarousel() {
     const photoWrapper = document.querySelector('.photo-wrapper');
     carouselShown = false;
     window.addEventListener('scroll', function () {
-        if (!carouselShown && isInViewport(photoWrapper)) {
-            carouselShown = true
-        }
+        // if (!carouselShown && isInViewport(photoWrapper)) {
+        //     carouselShown = true
+        // }
 
-        if (carouselShown) {
-            const currentScroll = window.scrollY;
+        // if (carouselShown) {
+        //     const currentScroll = window.scrollY;
 
-            if (currentScroll > carouselScroll) {
-                carouselScroll += 1; // Increment when scrolling down
-            } else if (currentScroll < carouselScroll) {
-                carouselScroll -= 1; // Decrement when scrolling up
-            }
-            photoWrapper.style.transform = `translateX(-${currentScroll}px)`;
-        }
+        //     if (currentScroll > carouselScroll) {
+        //         carouselScroll += 1; // Increment when scrolling down
+        //     } else if (currentScroll < carouselScroll) {
+        //         carouselScroll -= 1; // Decrement when scrolling up
+        //     }
+        //     photoWrapper.style.transform = `translateX(-${currentScroll}px)`;
+        // }
     });
 
     const photos = document.querySelectorAll('.photo');

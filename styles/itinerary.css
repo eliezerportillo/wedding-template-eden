@@ -28,6 +28,14 @@
 
 }
 
+.event-icon {
+    width: 75px;
+}
+
+.event-icon--large {
+    width: 155px;
+}
+
 .event .vertical-line {
     background-color: #191919;
     z-index: 100;

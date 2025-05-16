@@ -1,0 +1,28 @@
+/* filepath: c:\repos\wedding-template-eden\styles\colors.css */
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+.text-black {
+    color: var(--black-color);
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.bg-black {
+    background-color: var(--black-color);
+}

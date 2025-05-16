@@ -618,6 +618,11 @@
     /* 64px */
 }
 
+.pt-14 {
+    padding-top: 5rem;
+    /* 64px */
+}
+
 .pt-16 {
     padding-top: 6rem;
     /* 96px */
@@ -698,6 +703,11 @@
     /* 64px */
 }
 
+.pb-14 {
+    padding-bottom: 5rem;
+    /* 64px */
+}
+
 .pb-16 {
     padding-bottom: 6rem;
     /* 96px */
@@ -716,4 +726,207 @@
 .pb-32 {
     padding-bottom: 16rem;
     /* 256px */
+}
+
+/* Utility classes for padding-right spacing */
+
+/* Small padding-rights */
+.pr-1 {
+    padding-right: 0.25rem;
+    /* 4px */
+}
+
+.pr-2 {
+    padding-right: 0.5rem;
+    /* 8px */
+}
+
+.pr-3 {
+    padding-right: 0.75rem;
+    /* 12px */
+}
+
+.pr-4 {
+    padding-right: 1rem;
+    /* 16px */
+}
+
+/* Medium padding-rights */
+.pr-5 {
+    padding-right: 1.25rem;
+    /* 20px */
+}
+
+.pr-6 {
+    padding-right: 1.5rem;
+    /* 24px */
+}
+
+.pr-7 {
+    padding-right: 1.75rem;
+    /* 28px */
+}
+
+.pr-8 {
+    padding-right: 2rem;
+    /* 32px */
+}
+
+/* Large padding-rights */
+.pr-9 {
+    padding-right: 2.5rem;
+    /* 40px */
+}
+
+.pr-10 {
+    padding-right: 3rem;
+    /* 48px */
+}
+
+.pr-12 {
+    padding-right: 4rem;
+    /* 64px */
+}
+
+.pr-16 {
+    padding-right: 6rem;
+    /* 96px */
+}
+
+.pr-20 {
+    padding-right: 8rem;
+    /* 128px */
+}
+
+.pr-24 {
+    padding-right: 12rem;
+    /* 192px */
+}
+
+.pr-32 {
+    padding-right: 16rem;
+    /* 256px */
+}
+
+/* Utility classes for padding-left spacing */
+
+/* Small padding-lefts */
+.pl-1 {
+    padding-left: 0.25rem;
+    /* 4px */
+}
+
+.pl-2 {
+    padding-left: 0.5rem;
+    /* 8px */
+}
+
+.pl-3 {
+    padding-left: 0.75rem;
+    /* 12px */
+}
+
+.pl-4 {
+    padding-left: 1rem;
+    /* 16px */
+}
+
+/* Medium padding-lefts */
+.pl-5 {
+    padding-left: 1.25rem;
+    /* 20px */
+}
+
+.pl-6 {
+    padding-left: 1.5rem;
+    /* 24px */
+}
+
+.pl-7 {
+    padding-left: 1.75rem;
+    /* 28px */
+}
+
+.pl-8 {
+    padding-left: 2rem;
+    /* 32px */
+}
+
+/* Large padding-lefts */
+.pl-9 {
+    padding-left: 2.5rem;
+    /* 40px */
+}
+
+.pl-10 {
+    padding-left: 3rem;
+    /* 48px */
+}
+
+.pl-12 {
+    padding-left: 4rem;
+    /* 64px */
+}
+
+.pl-16 {
+    padding-left: 6rem;
+    /* 96px */
+}
+
+.pl-20 {
+    padding-left: 8rem;
+    /* 128px */
+}
+
+.pl-24 {
+    padding-left: 12rem;
+    /* 192px */
+}
+
+.pl-32 {
+    padding-left: 16rem;
+    /* 256px */
+}
+
+
+/* Utility classes for no margin and no padding */
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.ml-0 {
+    margin-left: 0 !important;
+}
+
+.mr-0 {
+    margin-right: 0 !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
+.pr-0 {
+    padding-right: 0 !important;
 }

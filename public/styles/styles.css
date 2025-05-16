@@ -1,8 +1,12 @@
 :root {
-    --primary-color: #837b70;
-    --secondary-color: #f4ece8;
+    --primary-color: #191919;
+    --secondary-color: #e5e5e5;
     --accent-color: #837b70;
-    --black-color: #191919;
+    --black-color: #000000;
+}
+
+.logo {
+    max-width: 220px
 }
 
 .my-section {
@@ -58,7 +62,7 @@
 
 
 body {
-    font-family: 'Baskvill', sans-serif;
+    font-family: 'Perpetua', 'Times New Roman', Times, serif;
     margin: 0;
     font-weight: lighter;
     color: var(--black-color);
@@ -68,10 +72,10 @@ body {
 .header-section {
     position: relative;
     background-image: url('../img/header.png');
-    background-size: 100%;
+    background-size: auto 100%;
     background-repeat: no-repeat;
-    background-position: bottom center;
-    height: 15rem;
+    background-position: center center;
+    height: 100dvh;
     background-color: var(--primary-color);
 
 
@@ -127,13 +131,13 @@ h5 {
 
 .title-1 {
     font-size: 1.7rem;
-    font-family: 'SacredValley', sans-serif;
+
     line-height: 2rem;
 }
 
 .title-2 {
     font-size: 2.875rem;
-    font-family: 'RetroSignature', sans-serif;
+
     line-height: 1.375rem;
 }
 
@@ -170,20 +174,13 @@ h5 {
     background-color: var(--secondary-color);
 }
 
-#weddingDate {
-    font-size: 1.2rem;
+.counter-separator {
+    height: 65px;
+    border-left: 0.0625rem solid var(--secondary-color);
+    margin: 0 0.25rem;
 }
 
-.font-retro {
-    font-family: 'SacredValley', sans-serif;
-
-}
-
-.counter-text {
-    font-family: 'Baskvill';
-    font-size: 2rem;
-    padding: 0 1rem;
-}
+.font-retro {}
 
 .story-section .story-title {
     margin: 0 1rem;
@@ -234,29 +231,24 @@ h5 {
 }
 
 .photo img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
-
-
-
 .photo-carousel {
-    overflow-x: hidden;
-    background-color: var(--secondary-color);
+    overflow-x: auto;
+
     white-space: nowrap;
 }
 
 .photo-wrapper {
+    height: 180px;
     display: inline-flex;
     transition: transform 0.5s ease-out;
 }
 
 .photo-carousel .photo {
-    flex: 0 0 25%;
-    /* Ajusta el ancho de cada foto según tus necesidades */
-
-    /* Espacio entre fotos */
+    flex: 0 0 33%;
 }
 
 .photo-carousel .photo img {
@@ -271,8 +263,9 @@ h5 {
 }
 
 
+
 .names {
-    font-family: 'SacredValley', sans-serif;
+
     align-items: flex-end;
 }
 
@@ -290,13 +283,13 @@ h5 {
 
 .rsvp-content {
 
-    font-family: 'SacredValley', sans-serif;
+
     padding: 1rem 2rem;
 
 }
 
 .rsvp-content-header {
-    font-family: 'RetroSignature';
+
     font-size: 4rem;
     letter-spacing: 2px;
     text-align: center;
@@ -306,7 +299,7 @@ h5 {
 
 
 .rsvp-header {
-    font-family: 'RetroSignature';
+
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
@@ -360,56 +353,24 @@ h5 {
     margin-bottom: 1rem;
 }
 
-.gift-section {
-    height: 100%;
-    flex-direction: column;
-    box-sizing: border-box;
-    display: flex;
-    place-content: stretch flex-start;
-    align-items: stretch;
-    max-width: 100%;
-    gap: 2rem;
-}
 
-.gift-section .gift-options {
-    flex-direction: column;
-    box-sizing: border-box;
-    display: flex;
-    place-content: center flex-start;
-    align-items: center;
-    gap: 2rem;
-}
+
 
 .gift-option {
-    max-width: 220px;
+    min-width: 40%;
+    max-width: 172px;
 }
 
-.gift-option .gift-option-title {
-    font-size: 3.5rem;
-
-}
-
-.gift-option .gift-option-name {
-    font-size: 1.4rem;
-    text-align: center;
-    height: 3.25rem;
-    flex-direction: column;
-    box-sizing: border-box;
-    display: flex;
-    place-content: center;
-    align-items: center;
+.gift-option img {
+    max-width: 172px;
 
 }
 
 
-.gift-section a {
-    text-decoration: none;
-    color: var(--accent-color);
-}
-
-.gift-section p {
-    text-align: center;
-
+.no-show {
+    display: none !important;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .gift-section .h-separator {
@@ -424,24 +385,82 @@ h5 {
     border: 0.0625rem solid var(--accent-color);
 }
 
-.gift-option {
-    min-width: 17.375rem;
+
+
+
+.dress-color {
+    border: 1px solid var(--primary-color);
+    height: 15px;
+    width: 45px;
 }
 
-.gift-option img {
-    max-width: 11.25rem;
+.dress-color.color-1 {
+    background-color: #525746;
 }
 
+.dress-color.color-2 {
+    background-color: #5f5c47;
+}
 
-.confirmation-section {
+.dress-color.color-3 {
+    background-color: #5d4a3c;
+}
 
-    background-image: url('../img/confirmation.png');
-    background-size: 137%;
+.dress-color.color-4 {
+    background-color: #3a3329;
+}
+
+.dress-color.color-5 {
+    background-color: #eeded5;
+}
+
+.dress-color.color-6 {
+    background-color: #d5b8b3;
+}
+
+.dress-color.color-7 {
+    background-color: #b39c78;
+}
+
+.letter {
+    background-image: url('../img/letter.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    height: auto;
+    width: 400px;
+    height: 260px;
+}
+
+.letter .letter-content {
+    padding: 60px 40px;
+}
+
+.black-gradient-background {
+
+    background-image: url('../img/wallpaper2.png');
+    background-size: 120%;
     background-repeat: no-repeat;
     background-position-y: top;
     background-position-x: center;
-    height: 60vh;
+    height: auto;
     color: var(--secondary-color);
+}
+
+.white-gradient-background {
+
+    background-image: url('../img/wallpaper.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+    height: auto;
+    color: var(--secondary-color);
+}
+
+.white-gradient-background.reverse {
+    background-position-y: bottom;
 }
 
 .confirmation-section .confirmation-button {
@@ -461,12 +480,14 @@ h5 {
     background-color: var(--primary-color);
     color: #fff;
     cursor: pointer;
-    font-family: 'RetroSignature';
+
     text-decoration: none;
 }
 
 .pill-small {
     padding: 0.25rem 0.5rem;
+    min-width: 120px;
+    text-align: center;
 }
 
 .parallax-container .pill {

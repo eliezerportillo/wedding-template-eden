@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Nuestra Boda | Lizbeth & Joel">
-    <meta property="og:description" content="22 de junio de 2025">
-    <meta property="og:image" content="https://lizeth-joel.web.app/img/preview_photo.jpg">
+    <meta property="og:title" content="Nuestra Boda | Alberto & Paola">
+    <meta property="og:description" content="09 de agosto de 2025">
+    <meta property="og:image" content="https://alberto-paola.web.app/img/preview_photo.jpg">
 
     <title>Nuestra boda</title>
     <link rel="stylesheet" href="styles/fonts.css"> <!-- Link to your custom CSS -->
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="styles/player.css">
     <link rel="stylesheet" href="styles/itinerary.css">
     <link rel="stylesheet" href="styles/util.css">
+    <link rel="stylesheet" href="styles/colors.css">
 
 </head>
 
@@ -34,15 +35,20 @@
 
     <!-- Header -->
     <section id="my-header-section" class="my-section header-section">
-        <div class="overlay d-flex flex-row justify-center align-end">
-            <div class="d-flex flex-column gap-1 mb-3">
-                <div class="names text-shadow-sm text-2xl">
-                    <span class="brideName"></span>
-                    <span>&</span>
+        <div class="overlay d-flex flex-column justify-between align-center">
+            <div class="d-flex flex-row justify-center align-center flex-grow-1">
+                <img src="img/logo.png" alt="Logotipo Alberto & Paola" class="logo mb-10">
+            </div>
+            <div class="d-flex flex-column justify-center mb-8 leading-tight font-thin" style="width: 220px;">
+                <div class="d-flex flex-row justify-center names text-xl text-uppercase">
                     <span class="groomName"></span>
+                    <span>&</span>
+                    <span class="brideName"></span>
                 </div>
-                <div>
-                    <span id="weddingDate" class="text-uppercase"></span>
+                <div class="d-flex flex-row justify-between mb-10">
+                    <span id="weddingDay" class="text-xl text-uppercase"></span>
+                    <span id="weddingMonth" class="text-xl text-uppercase"></span>
+                    <span id="weddingYear" class="text-xl text-uppercase"></span>
                 </div>
             </div>
         </div>
@@ -50,163 +56,204 @@
 
     <!-- Countdown -->
     <section id="my-countdown-section" class="my-section countdown-section">
-        <div class="d-flex flex-column inner-space section-tone-2 gap-4">
-            <h2 class="title-1 text-2xl">Cuenta Regresiva</h2>
-            <div class="d-flex flex-row justify-center align-center gap-2 text-uppercase">
-                <div class="fx-column gap-1">
-                    <span id="countdown-days" class="counter-text"></span>
-                    <span class="font-retro">Día<span class="superindice">(s)</span></span>
-                </div>
-                <div class="fx-column gap-1">
-                    <span id="countdown-hours" class="counter-text"></span>
-                    <span class="font-retro">Hora<span class="superindice">(s)</span></span>
-                </div>
-                <div class="fx-column gap-1">
-                    <span id="countdown-minutes" class="counter-text"></span>
-                    <span class="font-retro">Minuto<span class="superindice">(s)</span></span>
-                </div>
-                <div class="fx-column gap-1">
-                    <span id="countdown-seconds" class="counter-text"></span>
-                    <span class="font-retro">Segundo<span class="superindice">(s)</span></span>
+        <div class="parallax-container parallax-container--large d-flex flex-column justify-center align-center">
+            <img class="parallax-background" src="./img/parallax_1.png" alt="Parallax Background">
+
+            <div class="parallax-content">
+                <div class="d-flex flex-column inner-space gap-4 text-shadow-sm">
+                    <h2 class="text-xl text-uppercase">Cuenta Regresiva</h2>
+                    <div class="d-flex flex-row justify-center align-center gap-2">
+                        <div class="fx-column gap-1">
+                            <span id="countdown-days" class="text-xl leading-loose "></span>
+                            <span class="text-md">Día(s)</span>
+                        </div>
+                        <span class="counter-separator"></span>
+                        <div class="fx-column gap-1">
+                            <span id="countdown-hours" class="text-xl leading-loose "></span>
+                            <span class="text-md">Hora(s)</span>
+                        </div>
+                        <span class="counter-separator"></span>
+                        <div class="fx-column gap-1">
+                            <span id="countdown-minutes" class="text-xl leading-loose "></span>
+                            <span class="text-md">Minuto(s)</span>
+                        </div>
+                        <span class="counter-separator"></span>
+                        <div class="fx-column gap-1">
+                            <span id="countdown-seconds" class="text-xl leading-loose "></span>
+                            <span class="text-md">Segundo(s)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
     </section>
 
-    <!-- Gallery -->
-    <section id="my-carousel-section" class="my-section photo-carousel">
-        <div class="photo-wrapper">
-            <div class="photo"><img data-src="./img/photo_grid_1.jpg" alt="Photo 1" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_2.jpg" alt="Photo 2" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_3.jpg" alt="Photo 3" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_4.jpg" alt="Photo 4" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_5.jpg" alt="Photo 5" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_6.jpg" alt="Photo 6" loading="lazy"></div>
-            <div class="photo"><img data-src="./img/photo_grid_1.jpg" alt="Photo 8" loading="lazy"></div>
+    <!-- Quote Section -->
+    <section id="my-quote-section" class="parallax-container parallax-container--large">
+        <img class="parallax-background" src="./img/parallax_2.png" alt="Parallax Background">
+        <div class="parallax-content text-md" style="line-height: 1.05rem;">
+            <p class="text-black"><i>"Y sobre todas estas cosas vestíos de amor, que es <br> el vínculo perfecto."</i>
+            </p>
+            <p class="text-black"><i>—Colosenses 3:14</i></p>
         </div>
     </section>
 
     <!-- RSVP -->
-    <section id="my-rsvp-section" class="my-section rsvp-section">
+    <section id="my-rsvp-section" class="my-section rsvp-section section-tone-2">
         <div class="inner-space d-flex flex-column justify-center align-center gap-5">
-            <h2 class="text-xl text-uppercase">Itinerario</h2>
-            <div class="timeline">
-                <div class="event">
-                    <div class="time d-flex justify-center">4:30 PM</div>
-                    <div class="vertical-line">
-                    </div>
-                    <div class="details d-flex flex-column justify-center align-center gap-1">
-                        <div class="icon">
-                            <img src="img/Icon_Ceremonia.png" alt="Ceremonia">
-                        </div>
-                        <div class="title">CEREMONIA</div>
-                        <div class="subtitle">1ra IAFCJ</div>
-                        <a href="https://maps.app.goo.gl/FUnK5mibJq2fBo5Y9" class="pill pill-small">VER MAPA</a>
-                    </div>
+            <h2 class="text-2xl text-uppercase">Itinerario</h2>
+            <div class="d-flex flex-column justify-center align-center gap-10">
+                <div class="d-flex flex-column justify-center align-center gap-1 hidden">
+                    <img src="img/Icon_Ceremonia.png" alt="Anillos" class="event-icon">
+                    <div class="time d-flex justify-center text-lg-alt">4:00 PM</div>
+                    <div class="title text-lg-alt mb-2">Ceremonia Religiosa</div>
+                    <a href="https://maps.app.goo.gl/EKvYZoq1oHKqzTXr6?g_st=iw" class="pill pill-small text-lg"
+                        target="_blank">VER MAPA</a>
                 </div>
-                <div class="event left">
-                    <div class="time d-flex justify-center">6:00 PM</div>
-                    <div class="vertical-line">
-                    </div>
-                    <div class="details d-flex flex-column justify-center align-center gap-1">
-                        <div class="icon">
-                            <img src="img/Icon_Comida.png" alt="">
-                        </div>
-                        <div class="title">RECEPCIÓN</div>
-                        <div class="subtitle">Salón Espacio Galarza</div>
-                        <a href="https://maps.app.goo.gl/4zCQ9uwsiKkaiJ2g6" class="pill pill-small">VER MAPA</a>
-                    </div>
+                <div class="d-flex flex-column justify-center align-center gap-1 hidden">
+                    <img src="img/Icon_Recepcion.png" alt="Ceremonia" class="event-icon">
+                    <div class="time d-flex justify-center text-lg-alt">5:00 PM</div>
+                    <div class="title text-lg-alt">Coctel</div>
                 </div>
-                <div class="event">
-                    <div class="time d-flex justify-center">8:30 PM</div>
-                    <div class="vertical-line">
-                    </div>
-                    <div class="details d-flex flex-column justify-center align-center gap-1">
-                        <div class="icon">
-                            <img src="img/Icon_Iglesia.png" alt="">
-                        </div>
-                        <div class="title">CENA</div>
-                    </div>
+
+                <div class="d-flex flex-column justify-center align-center gap-1 hidden">
+                    <img src="img/Icon_Comida.png" alt="Ceremonia" class="event-icon">
+                    <div class="time d-flex justify-center text-lg-alt">6:30 PM</div>
+                    <div class="title text-lg-alt">Cena</div>
                 </div>
-                <div class="event left">
-                    <div class="time d-flex justify-center">11:00 PM</div>
-                    <div class="vertical-line">
-                    </div>
-                    <div class="details d-flex flex-column justify-center align-center gap-1">
-                        <div class="icon">
-                            <img src="img/Icon_Salida.png" alt="">
-                        </div>
-                        <div class="title text-center">SALIDA DE LOS NOVIOS</div>
-                    </div>
+
+                <div class="d-flex flex-column justify-center align-center gap-1 hidden">
+                    <img src="img/Icon_Dance.png" alt="Ceremonia" class="event-icon">
+                    <div class="time d-flex justify-center text-lg-alt">7:40 PM</div>
+                    <div class="title text-lg-alt">Baile de los Novios</div>
+                </div>
+
+                <div class="d-flex flex-column justify-center align-center gap-1 hidden">
+                    <img src="img/Icon_Cake.png" alt="Ceremonia" class="event-icon">
+                    <div class="time d-flex justify-center text-lg-alt">10:00 PM</div>
+                    <div class="title text-lg-alt">Pastel</div>
+                </div>
+
+                <div class="d-flex flex-column justify-center align-center gap-1 hidden">
+                    <img src="img/Icon_Salida.png" alt="Carrito" class="event-icon--large">
+                    <div class="time d-flex justify-center text-lg-alt">12:00 PM</div>
+                    <div class="title text-lg-alt">Salida de los Novios</div>
                 </div>
             </div>
         </div>
 
-
     </section>
+
+    <!-- Small Parallax Section -->
+    <section class="parallax-container parallax-container--mini">
+        <img class="parallax-background" src="img/parallax_3.png" alt="mini Parallax Background">
+        <div class="parallax-content text-center">
+
+        </div>
+    </section>
+
     <!-- Confirmation -->
-    <section id="my-congirmation-section" class="my-section">
-        <div class="inner-space section-tone-2 accent">
+    <section id="my-congirmation-section" class="my-section white-gradient-background">
+        <div class="inner-space">
             <div class="d-flex flex-column justify-center align-center gap-2 text-center">
 
-                <p class="text-sm">«SERÍA UN PLACER PARA NOSOTROS CONTAR CON TU PRESENCIA <br>
-                    EN UNO DE LOS DÍAS MÁS IMPORTANTES EN NUESTRA VIDA»</p>
-
-                <a href="https://wa.me/526641219146?text=%C2%A1Hola%21%2C%20quiero%20confirmar%20asitencia%20para%20la%20boda."
-                    class="pill pill-small text-uppercase text-md" target="_blank">
-                    Confirma tu asistencia
-                </a>
-
-            </div>
-        </div>
-
-    </section>
-
-    <!-- great Quote section -->
-    <section id="my-quote-section" class="my-section">
-        <div class="confirmation-section">
-
-            <div class="d-flex flex-column justify-center align-center flex-start pt-6 mr-6 ml-6 text-sm">
-
-                <p class="leading-tight text-center">6. PONME COMO UN SELLO SOBRE TU CORAZÓN, COMO UNA <br
-                        class="d-none-xs d-node.sm">
-                    MARCA SOBRE TU BRAZO; PORQUE FUERTE ES COMO LA MUERTE <br class="d-none-xs d-node-sm">
-                    EL AMOR; DUROS COMO EL SEOL LOS CELOS; SUS BRASAS, <br class="d-none-xs d-node-sm">
-                    BRASAS DE FUEGO, FUERTE LLAMA. 7. LAS MUCHAS AGUAS NO <br class="d-none-xs d-node-sm">
-                    PODRÁN APAGAR EL AMOR, NI LO AHOGARÁN LOS RÍOS.</p>
-                <p>CANTARES 8:67</p>
+                <div class="letter">
+                    <div class="letter-content text-primary d-flex flex-column justify-center align-center">
+                        <p class="text-sm leading-normal">«Sería un placer para nosotros contar con tu presencia en
+                            uno de los días más importantes de nuestra vida»</p>
+                        <a class="pill pill-small text-uppercase text-sm"
+                            href="https://wa.me/526642044953?text=Hola%2C%20quiero%20confirmar%20asistencia%20para%20la%20boda%20de%20Alberto%20y%20Paola."
+                            target="_blank" rel="noopener">
+                            Confirmar asistencia
+                        </a>
+                        <p class="text-sm leading-normal">
+                            Queremos que disfrutes plenamente de esta celebración
+                            especial, por lo que será un evento exclusivo para adultos.
+                            <br> La invitación es personal e intransferible. Agradecemos tu
+                            comprensión y respeto a este detalle.
+                        </p>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
-
 
     <!-- Dress code section -->
-    <section id="my-dress-code-section" class="my-section dress-code-section">
-        <div class="inner-space">
-            <div class="d-flex flex-column align-center gap-4 hidden">
-                <div class="d-flex flex-column align-center">
-                    <span class="text-xl text-uppercase">Código de vestimenta</span>
-                    <span class="text-sm text-uppercase">Formal</span>
-                </div>
+    <section id="my-dress-code-section" class="inner-space my-section white-gradient-background reverse">
 
-                <div class="d-flex flex-column justify-center align-center text-uppercase">
-                    <div class="d-flex flex-column align-center gap-1">
-                        <span class="font-bold text-md">Mujer</span>
-                        <span class="text-sm">Vestido largo/midi</span>
-                        <span class="text-sm">Abrigo recomendable</span>
-                        <span class="text-sm">No blanco | No colores claros</span>
-                    </div>
-                    <img src="img/dress_code.png" style="max-height: 450px;" class="inner-space"
-                        alt="Código de vestimenta" loading="lazy">
-                    <div class="d-flex flex-column align-center gap-1">
-                        <span class="font-bold text-md">Hombre</span>
-                        <span class="text-sm">Traje formal</span>
-                        <span class="text-sm">Corbata</span>
-                        <span class="text-sm">Zapatos formales</span>
-                    </div>
-                </div>
+        <div class="inner-space d-flex flex-column justify-center align-center gap-2 text-center text-primary">
+            <h2 class=" text-xl">DRESS CODE</h2>
+            <img src="img/dress_code.png" style="max-height: 280px;" />
+            <div class="d-flex flex-row justify-center align-center flex-wrap gap-3">
+                <span class="dress-color color-1"></span>
+                <span class="dress-color color-2"></span>
+                <span class="dress-color color-3"></span>
+                <span class="dress-color color-4"></span>
+                <span class="dress-color color-5"></span>
+                <span class="dress-color color-6"></span>
+                <span class="dress-color color-7"></span>
             </div>
+        </div>
+
+    </section>
+
+    <section id="my-gifts-section" class="my-section white-gradient-background">
+
+        <div class="d-flex flex-column justify-center align-center gap-3 text-center text-primary">
+            <h2 class="text-xl text-uppercase">Mesa de regalos</h2>
+            <style>
+                #gift-options {
+                    opacity: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: opacity 0.5s ease-in
+                }
+
+                #gift-options.show {
+                    opacity: 1;
+                    max-height: 600px;
+                    /* adjust as needed */
+                }
+            </style>
+            <span id="gift-options-button" class="pill pill-small text-uppercase text-sm" style="min-width: 170px;">Ver
+                más</span>
+            <div id="gift-options" class="inner-space d-flex flex-row justify-center flex-wrap align-center gap-2">
+                <img src="./img/gifts_cash.png" class="gift-option" alt="tarjeta de regalo" loading="lazy">
+                <img src="./img/gifts_zelle.png" class="gift-option" alt="tarjeta de regalo" loading="lazy">
+                <a class="gift-option" href="https://www.amazon.com/wedding/registry/3AXD329P9GIJ1" target="_blank"
+                    rel="noopener">
+                    <img src="./img/gifts_amazon.png" alt="Lista de deseos en amazon" loading="lazy">
+                </a>
+                <a class="gift-option" href="https://www.target.com/gift-registry/gift/ourwishlist" target="_blank"
+                    rel="noopener">
+                    <img src="./img/gifts_target.png" alt="Lista de deseos en target" loading="lazy">
+                </a>
+            </div>
+            <script>
+                document.getElementById('gift-options-button').addEventListener('click', function () {
+                    document.getElementById('gift-options').classList.add('show');
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="my-carousel-section" class="my-section photo-carousel hidden">
+        <div class="pt-10 pb-10 ml-4 mr-4 photo-wrapper gap-2">
+            <div class="photo"><img data-src="img/photo_grid_1.jpg" alt="Photo 1" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_2.jpg" alt="Photo 2" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_3.jpg" alt="Photo 3" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_4.jpg" alt="Photo 4" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_5.jpg" alt="Photo 5" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_6.jpg" alt="Photo 6" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_7.jpg" alt="Photo 7" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_8.jpg" alt="Photo 8" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_9.jpg" alt="Photo 9" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_10.jpg" alt="Photo 10" loading="lazy"></div>
+            <div class="photo"><img data-src="img/photo_grid_11.jpg" alt="Photo 11" loading="lazy"></div>
         </div>
     </section>
 
@@ -223,81 +270,55 @@
 
         <div class="d-flex flex-row flex-wrap justify-center align-center gap-4 d-none-xs">
 
-            <img src="img/gifts_cash.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
-            <img src="img/gifts_card.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+            <img src="img/gifts_cash.png" class="gift-option" alt="tarjeta de regalo" loading="lazy">
+            <img src="img/gifts_card.png" class="gift-option" alt="tarjeta de regalo" loading="lazy">
             <a href="https://www.target.com/gift-registry/gift/the-araujos-wedding">
-                <img src="img/gifts_list.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+                <img src="img/gifts_list.png" class="gift-option" alt="tarjeta de regalo" loading="lazy">
             </a>
         </div>
         <div class="text-center d-none-gt-xs">
 
-            <img src="img/gifts_cash.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
-            <img src="img/gifts_card.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+            <img src="img/gifts_cash.png" class="gift-option" alt="tarjeta de regalo" loading="lazy">
+            <img src="img/gifts_card.png" class="gift-option" alt="tarjeta de regalo" loading="lazy">
             <a href="https://www.target.com/gift-registry/gift/the-araujos-wedding">
-                <img src="img/gifts_list.png" class="gift-option" alt="regaldo en transferencia" loading="lazy">
+                <img src="img/gifts_list.png" class="gift-option" alt="tarjeta de regalo" loading="lazy">
             </a>
         </div>
     </section>
 
-    <!-- Parallax Section -->
-    <section class="parallax-container">
-        <img class="parallax-background" src="./img/parallax_1.png" alt="Parallax Background">
-        <div class="parallax-content">
-
-        </div>
-    </section>
-
-    <!-- No kids -->
-    <section id="my-story-section" class="inner-space">
-
-        <div class="d-flex flex-column justify-center align-center text-center">
-
-            <span class="text-2xl text-uppercase">No niños</span>
-            <span class="h-separator"></span>
-
-            <p class="text-sm text-uppercase">Aunque amamos a los niños, <br>
-                esta fiesta es solo para adultos.</p>
-        </div>
-    </section>
-
     <!-- Hotels -->
-    <section id="my-hotels-section" class="inner-space my-section section-tone-2">
-        <div class="hotels-section d-flex flex-column justify-center align-center hidden">
+    <section id="my-hotels-section" class="my-section section-tone-1 black-gradient-background">
+        <div class="pt-14 pb-14 d-flex flex-column justify-center align-center hidden gap-12">
 
-            <span class="text-2xl text-uppercase">Sugerencia de hospedaje</span>
-            <span class="h-separator"></span>
-
-            <p class="text-uppercase">Marriot Hotel</p>
-            <a class="pill pill-small " href="https://maps.app.goo.gl/zxDzob73sBX9Jske9" target="_blank">Ver
-                mapa</a>
-            <p class="text-uppercase">Real Inn</p>
-            <a class="pill pill-small " href="https://maps.app.goo.gl/T9oRpqAsPiikac6GA" target="_blank">Ver
-                mapa</a>
-            <p>Grand Hotel</p>
-            <a class="pill pill-small " href="https://maps.app.goo.gl/sbnptm8UgbQaSACd7" target="_blank">Ver
-                mapa</a>
-            <p class="text-uppercase">City Express By Marriot</p>
-            <a class="pill pill-small " href="https://maps.app.goo.gl/UsXykBLgZN2CwNXq6" target="_blank">Ver
-                mapa</a>
-        </div>
-    </section>
-
-    <!-- Weather Section -->
-    <section id="my-weather-section" class="my-section weather-section">
-        <div class="inner-space d-flex flex-column justify-center align-center">
-            <h2 class="text-xl text-uppercase">Clima</h2>
-            <span class="h-separator"></span>
-            <div class="inner-space weather-widget">
-                <iframe id="inlineFrameExample" title="Inline Frame Example" width="100%" height="220px" frameborder="0"
-                    src="./weather.html">
-                </iframe>
+            <span class="text-xl text-uppercase">Sugerencia de hospedaje</span>
+            <div class="d-flex flex-column justify-center align-center gap-2">
+                <p class="text-xl text-center m-0 leading-normal">Hotel Boutique <br>Sirius Valle</p>
+                <a class="pill pill-small text-primary bg-white text-uppercase text-lg"
+                    href="https://maps.app.goo.gl/SNwWFyGtjPgchnDx7" target="_blank">Ver
+                    mapa</a>
             </div>
+
+            <div class="d-flex flex-column justify-center align-center gap-2">
+                <p class="text-xl text-center m-0 leading-normal">Maple<br>Resort</p>
+                <a class="pill pill-small text-primary bg-white text-uppercase text-lg"
+                    href="https://maps.app.goo.gl/P2zNNJw35mwLjBgWA" target="_blank">Ver
+                    mapa</a>
+            </div>
+
+            <div class="d-flex flex-column justify-center align-center gap-2">
+                <p class="text-xl text-center m-0 leading-normal">Chateaux<br>Del Valle</p>
+                <a class="pill pill-small text-primary bg-white text-uppercase text-lg"
+                    href="https://maps.app.goo.gl/Ty8WZWiVNshMQTEZ9" target="_blank">Ver
+                    mapa</a>
+            </div>
+
+
         </div>
     </section>
 
     <!-- Parallax Section -->
-    <section class="parallax-container">
-        <img class="parallax-background" style="object-position: 33% 50%;" src="./img/parallax_2.png"
+    <section class="parallax-container parallax-container--large">
+        <img class="parallax-background" style="object-position: bottom" src="./img/parallax_4.png"
             alt="Parallax Background">
         <div class="parallax-content">
 
@@ -305,33 +326,12 @@
     </section>
 
 
-
-
-
-
-
-
-    <!-- hashtag section -->
-    <section id="my-hashtag-section" class="my-section hashtag-section">
-        <div class="inner-space section-tone-2 accent">
-            <div>
-                <span>Utiliza el hashtag #LizethJoel</span>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer id="my-footer-section" class="inner-space my-section">
+    <footer id="my-footer-section" class="my-section bg-black">
 
-        <div class="names text-2xl">
-            <span class="brideName"></span>
-            <span>&</span>
-            <span class="groomName"></span>
-        </div>
 
-        <span class="h-separator"></span>
+        <img src="img/footer.png" alt="Logotipo Alberto & Paola" style="width: 100%;">
 
-        <p>DISEÑADO POR: CESIA MORENO PHOTOGRAPHY Y CAOS CREATIVO</p>
     </footer>
 
     <!-- Modal's photo -->

@@ -2,7 +2,8 @@
 .parallax-container {
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: var(--parallax-height, 500px);
+    /* Default height is 500px */
     perspective: 1px;
 }
 
@@ -26,4 +27,21 @@
     padding: 20px;
     color: #fff;
     text-align: center;
+}
+
+/* Modifier classes for different heights */
+.parallax-container--mini {
+    --parallax-height: 200px;
+}
+
+.parallax-container--small {
+    --parallax-height: 300px;
+}
+
+.parallax-container--medium {
+    --parallax-height: 500px;
+}
+
+.parallax-container--large {
+    --parallax-height: 700px;
 }
