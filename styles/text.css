@@ -62,6 +62,11 @@
     /* 33.6px */
 }
 
+.text-md-alt {
+    font-size: 1.274rem;
+    /* 43.68px */
+}
+
 /* Large text */
 .text-lg {
     font-size: 1rem;
@@ -78,6 +83,11 @@
 .text-xl {
     font-size: 1.28rem;
     /* 57.6px */
+}
+
+.text-xl-alt {
+    font-size: 1.664rem;
+    /* 74.88px */
 }
 
 /* 2X large text */

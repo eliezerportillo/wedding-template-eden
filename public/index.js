@@ -231,26 +231,33 @@ function initScollElements() {
 
 
 let carouselShown;
-let carouselScroll = 0;
+let carouselStart = 0;
+let carouselScrollStarted = false;
 
 function initCarousel() {
     const photoWrapper = document.querySelector('.photo-wrapper');
     carouselShown = false;
     window.addEventListener('scroll', function () {
-        // if (!carouselShown && isInViewport(photoWrapper)) {
-        //     carouselShown = true
-        // }
+        if (!carouselShown && isInViewport(photoWrapper)) {
+            carouselShown = true
+        }
 
-        // if (carouselShown) {
-        //     const currentScroll = window.scrollY;
+        if (carouselShown) {
+            const currentScroll = window.scrollY;
+            if (!carouselScrollStarted) {
+                carouselScrollStarted = true;
+                carouselStart = currentScroll; // Initialize carouselScroll with the current scroll position
+            }
 
-        //     if (currentScroll > carouselScroll) {
-        //         carouselScroll += 1; // Increment when scrolling down
-        //     } else if (currentScroll < carouselScroll) {
-        //         carouselScroll -= 1; // Decrement when scrolling up
-        //     }
-        //     photoWrapper.style.transform = `translateX(-${currentScroll}px)`;
-        // }
+
+            const scrollDiff = currentScroll - carouselStart; // Calculate the difference from the initial scroll position
+
+            if (scrollDiff > 0)
+                photoWrapper.style.transform = `translateX(-20px)`;
+            else
+                photoWrapper.style.transform = `translateX(${0}px)`;
+
+        }
     });
 
     const photos = document.querySelectorAll('.photo');
